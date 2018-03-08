@@ -1,33 +1,54 @@
 package com.kline.fragment;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import com.kline.common.HtReaderApp;
+import com.kline.activity.LoginActivity;
+import com.kline.bean.User;
+import com.lidroid.xutils.ViewUtils;
 
 /**
- * Created by mei on 2018/3/8.
+ * Created by mei on 2016/3/21.
  */
-
 public abstract class BaseFragment extends Fragment {
-    // Fragment当前状态是否可见
-    protected boolean isVisible ,isPrepared;
+
+    @Nullable
     @Override
-    public void setUserVisibleHint(boolean isVisibleToUser) {
-        super.setUserVisibleHint(isVisibleToUser);
-        // 判断对用户是否可见
-        if(isVisibleToUser) {
-            isVisible = true;
-            onVisible();
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        View view = createView(inflater,container,savedInstanceState);
+        ViewUtils.inject(this, view);
+        initToolBar();
+        init();
+        return view;
+    }
+
+    public void  initToolBar(){
+    }
+
+
+    public abstract View createView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState);
+
+    public abstract void init();
+
+    public void startActivity(Intent intent, boolean isNeedLogin) {
+        if(isNeedLogin) {
+            User user = HtReaderApp.getInstance().getUser();
+            if(user != null) {
+                super.startActivity(intent);
+            } else {
+                HtReaderApp.getInstance().putIntent(intent);
+                Intent loginIntent = new Intent(getContext(), LoginActivity.class);
+                super.startActivity(loginIntent);
+            }
         } else {
-            isVisible = false;
-            onInvisible();
+            super.startActivity(intent);
         }
     }
-    // 可见
-    protected void onVisible() {
-        lazyLoad();
-    }
-    // 不可见
-    protected void onInvisible() {
-    }
-    // 延迟加载子类必须重写此方法
-    protected abstract void lazyLoad();
 }

@@ -1,111 +1,98 @@
 package com.kline.activity;
 
-import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.view.ViewPager;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TabHost;
+import android.widget.TextView;
 
 import com.kline.R;
-import com.kline.adpter.TestPagerAdapter;
+import com.kline.activity.BaseActivity;
+import com.kline.bean.BottomTab;
+import com.kline.fragment.CartFragment;
+import com.kline.fragment.HomeFragment;
+import com.kline.fragment.HotFragment;
+import com.kline.fragment.MineFragment;
+import com.kline.fragment.CategoryFragment;
+import com.kline.widget.FragmentTabHost;
 
-public class MainActivity extends FragmentActivity implements ViewPager.OnPageChangeListener ,
-        RadioGroup.OnCheckedChangeListener{
+import java.util.ArrayList;
+import java.util.List;
 
-    private TestPagerAdapter adapter;
-    private ViewPager pager;
-    Context context;
-    RadioGroup radioGroup;
-    RadioButton self, range, mintime, kline, market, community;
+public class MainActivity extends BaseActivity {
+
+    private FragmentTabHost mTabHost;
+    private LayoutInflater mInflater;
+
+    private List<BottomTab> mTabs = new ArrayList<BottomTab>(5);
+
+    private CartFragment cartFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // 引入布局文件
-        setContentView(R.layout.test_main);
-        context = this;
-        //初始化布局中的组件
-        radioGroup = (RadioGroup) findViewById(R.id.radio_group);
-        self = (RadioButton) findViewById(R.id.self);
-        range = (RadioButton) findViewById(R.id.range);
-        mintime = (RadioButton) findViewById(R.id.mintime);
-        kline = (RadioButton) findViewById(R.id.kline);
-        market = (RadioButton) findViewById(R.id.market);
-        community = (RadioButton) findViewById(R.id.community);
-        // 查找初始化布局文件中的pager
-        pager = (ViewPager) findViewById(R.id.pager);
-        // Test必须要继承自FragmentActivity才能通过getSupportFragmentManager()对其初始化
-        adapter = new TestPagerAdapter(getSupportFragmentManager());
-        // 为paegr设置适配器
-        pager.setAdapter(adapter);
-        // 为Pager的页面改变添加事件监听
-        pager.addOnPageChangeListener(this);
-        radioGroup.setOnCheckedChangeListener(this);
-        pager.setCurrentItem(0);
-        self.setChecked(true);
+        setContentView(R.layout.activity_main);
+        initBottomTab();
+
     }
 
-    // 实现OnPageChangeListener需要重写的一些方法
-    @Override
-    public void onPageScrollStateChanged(int state) {
-        // 主要这里编写页面翻动之后需要执行的事件
-        /** state的状态有三个，0表示什么都没做，1正在滑动，2滑动完毕 */
-        if (state == 2) {
-            switch (pager.getCurrentItem()) {
-                case 0:
-                    self.setChecked(true);
-                    break;
-                case 1:
-                    range.setChecked(true);
-                    break;
-                case 2:
-                    mintime.setChecked(true);
-                    break;
-                case 3:
-                    kline.setChecked(true);
-                    break;
-                case 4:
-                    market.setChecked(true);
-                    break;
-                case 5:
-                    community.setChecked(true);
-                    break;
+
+    private void initBottomTab() {
+        BottomTab homeTab = new BottomTab(R.string.home, R.drawable.tab_selector_home, HomeFragment.class);
+        BottomTab categoryTab = new BottomTab(R.string.hot, R.drawable.tab_selector_hot, HotFragment.class);
+        BottomTab searchTab = new BottomTab(R.string.category, R.drawable.tab_selector_discover, CategoryFragment.class);
+        BottomTab carTab = new BottomTab(R.string.cart, R.drawable.tab_selector_car, CartFragment.class);
+        BottomTab minerTab = new BottomTab(R.string.mine, R.drawable.tab_selector_miner, MineFragment.class);
+        mTabHost = (FragmentTabHost) findViewById(android.R.id.tabhost);
+        mTabHost.setup(this, getSupportFragmentManager(), R.id.realTabContent);
+        mTabs.add(homeTab);
+        mTabs.add(categoryTab);
+        mTabs.add(searchTab);
+        mTabs.add(carTab);
+        mTabs.add(minerTab);
+        for (BottomTab tab : mTabs) {
+            TabHost.TabSpec tabSpec = mTabHost.newTabSpec(getString(tab.getTitleId()));
+            View view = buildIndicatorView(tab);
+            tabSpec.setIndicator(view);
+            mTabHost.addTab(tabSpec, tab.getFragment(), null);
+        }
+        //显示分割线
+        mTabHost.getTabWidget().setShowDividers(LinearLayout.SHOW_DIVIDER_MIDDLE);
+        // 不显示分割线
+        //mTabHost.getTabWidget().setShowDividers(LinearLayout.SHOW_DIVIDER_NONE);
+        mTabHost.setCurrentTab(0);
+
+        mTabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
+            @Override
+            public void onTabChanged(String tabId) {
+                if (tabId == getString(R.string.cart)) {
+                    if(cartFragment == null) {
+                        Fragment fragment = getSupportFragmentManager().findFragmentByTag(getString(R.string.cart));
+                        if (fragment != null) {
+                            cartFragment = (CartFragment) fragment;
+                            cartFragment.refreshData();
+                        }
+                    } else {
+                         cartFragment.refreshData();
+                    }
+                }
+
             }
-        }
+        });
     }
 
-    @Override
-    public void onPageScrolled(int arg0, float arg1, int arg2) {
-        // 页面滚动时执行
+    private View buildIndicatorView(BottomTab tab) {
+        mInflater = LayoutInflater.from(this);
+        View view = mInflater.inflate(R.layout.tab_indicator, null);
+        ImageView imageView = (ImageView) view.findViewById(R.id.icon_tab);
+        TextView textView = (TextView) view.findViewById(R.id.txt_tab);
+        imageView.setBackgroundResource(tab.getIconId());
+        textView.setText(tab.getTitleId());
+        return view;
     }
 
-    @Override
-    public void onPageSelected(int arg0) {
-        // 页面被选中之后执行
-    }
 
-    @Override
-    public void onCheckedChanged(RadioGroup group, int checkedId) {
-        // 判断当前选中的按钮的资源ID值，单选按钮触发页面翻页
-        switch (checkedId) {
-            case R.id.self:
-                pager.setCurrentItem(0);
-                break;
-            case R.id.range:
-                pager.setCurrentItem(1);
-                break;
-            case R.id.mintime:
-                pager.setCurrentItem(2);
-                break;
-            case R.id.kline:
-                pager.setCurrentItem(3);
-                break;
-            case R.id.market:
-                pager.setCurrentItem(4);
-                break;
-            case R.id.community:
-                pager.setCurrentItem(5);
-                break;
-        }
-    }
 }

@@ -1,100 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@id/root"
-    android:layout_width="wrap_content"
-    android:layout_height="fill_parent"
-    android:background="@color/whitesmoke"
-    android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent">
+    <FrameLayout
+        android:id="@+id/realTabContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/bg_color">
+    </FrameLayout>
+    <com.kline.widget.FragmentTabHost
+        android:visibility="visible"
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0"
+            android:id="@android:id/tabcontent">
 
-        <RadioGroup
-            android:id="@id/radio_group"
-            android:layout_width="fill_parent"
-            android:layout_height="@dimen/radio_group_height"
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="0.0dip"
-            android:background="@drawable/radiogroup"
-            android:focusable="true"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+        </FrameLayout>
 
-            <RadioButton
-                android:id="@id/self"
-                style="@style/main_tab_bottom"
-                android:layout_marginTop="@dimen/divider2"
-                android:background="@color/transparent"
-                android:button="@null"
-                android:drawableTop="@drawable/nav_self"
-                android:text="@string/self"
-                android:textColor="@drawable/nav_text"
-                android:textSize="@dimen/textsize" />
+    </com.kline.widget.FragmentTabHost>
 
-            <RadioButton
-                android:id="@id/range"
-                style="@style/main_tab_bottom"
-                android:layout_marginTop="@dimen/divider2"
-                android:background="@color/transparent"
-                android:drawableTop="@drawable/nav_range"
-                android:text="@string/range"
-                android:textColor="@drawable/nav_text"
-                android:textSize="@dimen/textsize" />
 
-            <RadioButton
-                android:id="@id/mintime"
-                style="@style/main_tab_bottom"
-                android:layout_marginTop="2.0dip"
-                android:background="@color/transparent"
-                android:drawableTop="@drawable/nav_mintime"
-                android:text="@string/mintime"
-                android:textColor="@drawable/nav_text"
-                android:textSize="@dimen/textsize" />
 
-            <RadioButton
-                android:id="@id/kline"
-                style="@style/main_tab_bottom"
-                android:layout_marginTop="@dimen/divider2"
-                android:background="@color/transparent"
-                android:drawableTop="@drawable/nav_kline"
-                android:text="@string/kline"
-                android:textColor="@drawable/nav_text"
-                android:textSize="@dimen/textsize" />
-
-            <RadioButton
-                android:id="@id/market"
-                style="@style/main_tab_bottom"
-                android:layout_marginTop="@dimen/divider2"
-                android:background="@color/transparent"
-                android:drawableTop="@drawable/nav_market"
-                android:text="@string/market"
-                android:textColor="@drawable/nav_text"
-                android:textSize="@dimen/textsize" />
-
-            <RadioButton
-                android:id="@id/community"
-                style="@style/main_tab_bottom"
-                android:layout_marginTop="@dimen/divider2"
-                android:background="@color/transparent"
-                android:drawableTop="@drawable/nav_community"
-                android:text="@string/community"
-                android:textColor="@drawable/nav_text"
-                android:textSize="@dimen/textsize" />
-        </RadioGroup>
-
-        <View
-            android:id="@id/tab_bar"
-            android:layout_width="fill_parent"
-            android:layout_height="@dimen/divider"
-            android:layout_above="@id/radio_group"
-            android:background="@color/transparent" />
-
-        <android.support.v4.view.ViewPager
-            android:id="@id/mpager"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_above="@id/tab_bar" />
-    </RelativeLayout>
 </LinearLayout>

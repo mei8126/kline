@@ -3,9 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Android.iml" filepath="$PROJECT_DIR$/Android.iml" />
-      <module fileurl="file://F:\stock\kline\Source\Android\Android.iml" filepath="F:\stock\kline\Source\Android\Android.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://F:\stock\kline\Source\Android\app\app.iml" filepath="F:\stock\kline\Source\Android\app\app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/baidupay/baidupay.iml" filepath="$PROJECT_DIR$/baidupay/baidupay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/paysdk/paysdk.iml" filepath="$PROJECT_DIR$/paysdk/paysdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/smssdk/smssdk.iml" filepath="$PROJECT_DIR$/smssdk/smssdk.iml" />
     </modules>
   </component>
 </project>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="myarrays">
+        <item>C#</item>
+        <item>VB</item>
+        <item>VC</item>
+        <item>VF</item>
+    </string-array>
+    <array name="loading_progress_tips_array" />
+</resources>

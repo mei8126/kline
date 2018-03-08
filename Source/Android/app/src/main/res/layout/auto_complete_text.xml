@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/text" android:background="@color/gray" android:paddingLeft="@dimen/margin5" android:layout_width="fill_parent" android:layout_height="@dimen/radio_group_height" android:text="SZ000001-平安银行"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

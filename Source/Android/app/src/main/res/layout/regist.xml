@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.kline"
+    android:id="@id/root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@id/bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/bar_height"
+        android:background="@color/bar_color">
+
+        <Button
+            android:id="@id/back"
+            android:layout_width="@dimen/margin25"
+            android:layout_height="@dimen/margin25"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back_click" />
+
+        <TextView
+            android:id="@id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/regist"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/radio_group_height"
+        android:layout_marginBottom="@dimen/margin20"
+        android:layout_marginTop="@dimen/margin25">
+
+        <com.demo.view.ClearEditText
+            android:id="@id/loginname"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/margin25"
+            android:layout_marginRight="@dimen/margin25"
+            android:background="@drawable/editshape"
+            android:hint="邮箱账号/手机号注册"
+            android:maxLength="18"
+            android:paddingLeft="@dimen/margin10"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/radio_group_height"
+        android:layout_marginBottom="@dimen/margin20"
+        android:layout_marginTop="@dimen/margin5">
+
+        <com.demo.view.ClearEditText
+            android:id="@id/password"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/margin25"
+            android:layout_marginRight="@dimen/margin25"
+            android:background="@drawable/editshape"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:maxLength="18"
+            android:paddingLeft="@dimen/margin10"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/confirm"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/radio_group_height"
+        android:layout_marginBottom="@dimen/margin10"
+        android:layout_marginTop="@dimen/margin5">
+
+        <com.demo.view.ClearEditText
+            android:id="@id/confirmpass"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/margin25"
+            android:layout_marginRight="@dimen/margin25"
+            android:background="@drawable/editshape"
+            android:hint="请确认密码"
+            android:inputType="textPassword"
+            android:maxLength="18"
+            android:paddingLeft="@dimen/margin10"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/codeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/radio_group_height"
+        android:layout_marginBottom="@dimen/margin20"
+        android:layout_marginTop="@dimen/margin10">
+
+        <com.demo.view.ClearEditText
+            android:id="@id/code"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/margin25"
+            android:layout_marginRight="@dimen/margin25"
+            android:layout_weight="3.5"
+            android:background="@drawable/editshape"
+            android:hint="验证码"
+            android:paddingBottom="@dimen/margin5"
+            android:paddingLeft="@dimen/margin10"
+            android:paddingTop="@dimen/margin5"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@id/code_btn"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="@dimen/margin25"
+            android:layout_weight="3.5"
+            android:background="@drawable/valide_btn"
+            android:text="获取验证码"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin15"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.demo.view.SmoothCheckBox
+            android:id="@id/checkbox"
+            android:layout_width="@dimen/margin25"
+            android:layout_height="@dimen/margin25"
+            android:checked="false"
+            app:color_checked="@color/whitesmoke"
+            app:color_tick="@color/bar_color"
+            app:color_unchecked_stroke="@color/text_gray" />
+
+        <TextView
+            android:id="@id/checkbox_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin10"
+            android:autoLink="web"
+            android:clickable="true"
+            android:text="@string/links"
+            android:textColor="@color/bar_color" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+            android:id="@id/submit"
+            android:layout_width="@dimen/login_bt_width"
+            android:layout_height="@dimen/radio_group_height"
+            android:layout_centerInParent="true"
+            android:background="@drawable/login_btn"
+            android:text="@string/wregist"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root" android:background="@color/whitesmoke" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/bar" android:background="@color/bar_color" android:layout_width="fill_parent" android:layout_height="@dimen/bar_height">
+        <TextView android:textSize="@dimen/textsize" android:textColor="@color/white" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/market" android:layout_centerInParent="true" />
+        <Button android:id="@id/search" android:background="@drawable/search_click" android:focusable="true" android:clickable="true" android:layout_width="@dimen/margin25" android:layout_height="@dimen/margin25" android:layout_marginRight="@dimen/margin10" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/hs_root" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/margin10">
+                <TextView android:textSize="@dimen/textsize" android:textColor="@color/bar_color" android:layout_gravity="center_horizontal" android:id="@id/hs_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/margin5" android:text="@string/hsmarket" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/fund_root" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/margin10">
+                <TextView android:textSize="@dimen/textsize" android:textColor="@color/bar_color" android:layout_gravity="center_horizontal" android:id="@id/fund_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/margin5" android:text="@string/fund" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/hk_root" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/margin10">
+                <TextView android:textSize="@dimen/textsize" android:textColor="@color/bar_color" android:layout_gravity="center_horizontal" android:id="@id/hk_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/margin5" android:text="@string/hkstock" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/goods_root" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/margin10">
+                <TextView android:textSize="@dimen/textsize" android:textColor="@color/bar_color" android:layout_gravity="center_horizontal" android:id="@id/goods_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/margin5" android:text="@string/goods" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/bond_root" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/margin10">
+                <TextView android:textSize="@dimen/textsize" android:textColor="@color/bar_color" android:layout_gravity="center_horizontal" android:id="@id/bond_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/margin5" android:text="@string/bond" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/foreign_root" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/margin10">
+                <TextView android:textSize="@dimen/textsize" android:textColor="@color/bar_color" android:layout_gravity="center_horizontal" android:id="@id/foreign_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/margin5" android:text="@string/foreign" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

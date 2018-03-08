@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.demo.view.PullToRefreshLayout android:id="@id/refresh_view" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/refresh_head" />
+    <com.demo.view.PullableListView android:id="@id/content_view" android:background="@color/transparent" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@color/white" android:dividerHeight="@dimen/divider" />
+    <include layout="@layout/load_more" />
+</com.demo.view.PullToRefreshLayout>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.demo.view.PullToRefresh android:id="@id/refresh_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/refresh_head" />
+    <com.demo.view.PullableScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/root" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin10">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/bgq_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/BGQ_02" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/bgq_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/ssrq_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/SSRQ_03" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/ssrq_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/mgsy_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/MGSY_04" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/mgsy_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/mgjzc_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/MGJZC_05" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/mgjzc_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/jzcsyl_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/JZCSYL_06" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/jzcsyl_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/mgjyxj_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/MGJYXJ_07" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/mgjyxj_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/mggjj_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/MGGJJ_08" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/mggjj_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/mgwfp_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/MGWFP_09" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/mgwfp_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/gdqyb_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/GDQYB_10" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/gdqyb_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/jlrtb_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/JLRTB_11" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/jlrtb_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/zysrtb_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/ZYSRTB_12" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/zysrtb_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/xsmll_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/XSMLL_13" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/xsmll_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/tzmgjzc_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/TZMGJZC_14" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/tzmgjzc_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/zzc_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/ZZC_15" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/zzc_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/ldzc_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/LDZC_16" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/ldzc_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/gdzc_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/GDZC_17" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/gdzc_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/wxzc_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/WXZC_18" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/wxzc_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/ldfz_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/LDFZ_19" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/ldfz_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/cqfz_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/CQFZ_20" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/cqfz_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/zfz_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/ZFZ_21" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/zfz_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/gdqy_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/GDQY_22" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/gdqy_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/zbgjj_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/ZBGJJ_23" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/zbgjj_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/jyxjll_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/JYXJLL_24" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/jyxjll_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/tzxjll_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/TZXJLL_25" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/tzxjll_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/czxjll_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/CZXJLL_26" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/czxjll_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/xjzje_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/XJZJE_27" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/xjzje_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/zysr_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/ZYSR_28" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/zysr_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/zylr_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/ZYLR_29" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/zylr_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/yylr_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/YYLR_30" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/yylr_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/tzsy_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/TZSY_31" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/tzsy_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/yywsz_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/YYWSZ_32" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/yywsz_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/lrze_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/LRZE_33" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/lrze_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/jlr_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/JLR_34" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/jlr_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/wfplr_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/WFPLR_35" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/wfplr_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/zgb_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/ZGB_36" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/zgb_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/wxsghj_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/WXSGHJ_37" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/wxsghj_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/ag_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/AG_38" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/ag_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/bg_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/BG_39" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/bg_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/jwssg_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/JWSSG_40" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/jwssg_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/qtltg_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/QTLTG_41" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/qtltg_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/xsghj_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/XSGHJ_42" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/xsghj_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/gjcg_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/GJCG_43" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/gjcg_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/gyfrg_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/GYFRG_44" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/gyfrg_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/jnfrg_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/JNFRG_45" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/jnfrg_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/jnzrrg_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/JNZRRG_46" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/jnzrrg_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/qtfqrg_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/QTFQRG_47" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/qtfqrg_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/mjfrg_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/MJFRG_48" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/mjfrg_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/jwfrg_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/JWFRG_49" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/jwfrg_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/jwzrrg_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/JWZRRG_50" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/jwzrrg_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin30">
+                    <TextView android:textColor="@color/black" android:id="@id/yxghqt_lable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/YXGHQT_51" android:layout_alignParentLeft="true" />
+                    <TextView android:textColor="@color/magenta" android:id="@id/yxghqt_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin10" android:text="@string/dash" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.demo.view.PullableScrollView>
+</com.demo.view.PullToRefresh>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root" android:background="@color/whites" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/bar" android:background="@color/bar_color" android:layout_width="fill_parent" android:layout_height="@dimen/bar_height">
+        <Button android:id="@id/back" android:background="@drawable/back_click" android:layout_width="@dimen/margin25" android:layout_height="@dimen/margin25" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textColor="@color/white" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/maparamset" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/maparam" android:background="@drawable/itemclick3" android:layout_width="fill_parent" android:layout_height="@dimen/margin45" android:layout_marginTop="@dimen/margin10">
+        <TextView android:textColor="@color/bar_color" android:id="@id/maparam_lable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin10" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <Button android:id="@id/maparam_btn" android:background="@drawable/right_press" android:layout_width="@dimen/margin25" android:layout_height="@dimen/margin25" android:layout_marginRight="@dimen/margin10" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <TextView android:id="@id/divider" android:background="@color/transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/divider" />
+    <ListView android:id="@id/maparam_listview" android:visibility="gone" android:scrollbars="none" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:cacheColorHint="@color/transparent" android:divider="@color/transparent" android:dividerHeight="@dimen/divider" />
+</LinearLayout>

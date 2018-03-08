@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:gravity="top" android:id="@id/submit_content" android:background="@drawable/editshape" android:padding="@dimen/margin5" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="@dimen/personal_up" android:layout_marginLeft="@dimen/margin10" android:layout_marginTop="@dimen/margin30" android:layout_marginRight="@dimen/margin10" android:layout_marginBottom="@dimen/margin10" android:hint="@string/suggest_hint" android:maxLength="400" />
+    <com.demo.view.ClearEditText android:id="@id/submit_contact" android:background="@drawable/editshape" android:padding="@dimen/margin5" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="@dimen/margin40" android:layout_marginLeft="@dimen/margin10" android:layout_marginTop="@dimen/margin20" android:layout_marginRight="@dimen/margin10" android:hint="@string/contact_hint" android:singleLine="true" android:maxLength="30" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <Button android:enabled="false" android:textColor="@color/white" android:id="@id/submit_bt" android:background="@drawable/release_btn" android:layout_width="@dimen/login_bt_width" android:layout_height="@dimen/margin45" android:text="@string/submit" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</LinearLayout>

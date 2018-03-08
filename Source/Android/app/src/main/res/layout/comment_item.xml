@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root" android:background="@drawable/itemclick2" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/margin30" android:layout_margin="@dimen/margin10" android:baselineAligned="true">
+        <ImageView android:id="@id/userlogo" android:layout_width="@dimen/margin25" android:layout_height="@dimen/margin25" android:src="@drawable/unknown" />
+        <TextView android:textColor="@color/bar_color" android:gravity="center_vertical" android:id="@id/nickname" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin5" android:layout_marginRight="@dimen/margin5" android:text="旺旺" />
+        <TextView android:gravity="center_vertical" android:id="@id/time" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin5" android:text="2015-01-02" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/margin10">
+        <TextView android:textColor="@color/gray" android:id="@id/content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="股市有风险，入市须谨慎!" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/root" android:background="@drawable/listviewselector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:baselineAligned="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textColor="@color/black" android:gravity="center" android:id="@id/item01" android:layout_width="@dimen/item_width" android:layout_height="wrap_content" android:singleLine="true" />
+        <TextView android:textColor="@color/black" android:gravity="center_horizontal" android:id="@id/item02" android:layout_width="@dimen/item_width" android:layout_height="wrap_content" android:singleLine="true" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/head" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <TextView android:layout_gravity="bottom" android:layout_width="@dimen/divider" android:layout_height="fill_parent" />
+        <TextView android:textColor="@color/black" android:gravity="center" android:id="@id/item2" android:layout_width="@dimen/item_width" android:layout_height="fill_parent" android:singleLine="true" />
+        <TextView android:layout_gravity="bottom" android:layout_width="@dimen/divider" android:layout_height="fill_parent" />
+        <TextView android:textColor="@color/black" android:gravity="center" android:id="@id/item3" android:layout_width="@dimen/item_width" android:layout_height="fill_parent" android:singleLine="true" />
+        <TextView android:layout_gravity="bottom" android:layout_width="@dimen/divider" android:layout_height="fill_parent" />
+        <TextView android:textColor="@color/black" android:gravity="center" android:id="@id/item4" android:layout_width="@dimen/item_width" android:layout_height="fill_parent" android:singleLine="true" />
+        <TextView android:layout_gravity="bottom" android:layout_width="@dimen/divider" android:layout_height="fill_parent" />
+        <TextView android:textColor="@color/black" android:gravity="center" android:id="@id/item5" android:layout_width="@dimen/item_width" android:layout_height="fill_parent" android:singleLine="true" />
+        <TextView android:layout_gravity="bottom" android:layout_width="@dimen/divider" android:layout_height="fill_parent" />
+        <TextView android:textColor="@color/black" android:gravity="center" android:id="@id/item6" android:layout_width="@dimen/item_width" android:layout_height="fill_parent" android:singleLine="true" />
+        <TextView android:layout_gravity="bottom" android:layout_width="@dimen/divider" android:layout_height="fill_parent" />
+        <TextView android:textColor="@color/black" android:gravity="center" android:id="@id/item7" android:layout_width="@dimen/item_width" android:layout_height="fill_parent" android:singleLine="true" />
+        <TextView android:layout_gravity="bottom" android:layout_width="@dimen/divider" android:layout_height="fill_parent" />
+        <TextView android:textColor="@color/black" android:gravity="center" android:id="@id/item8" android:layout_width="@dimen/item_width" android:layout_height="fill_parent" android:singleLine="true" />
+        <TextView android:layout_gravity="bottom" android:layout_width="@dimen/divider" android:layout_height="fill_parent" />
+        <TextView android:textColor="@color/black" android:gravity="center" android:id="@id/item9" android:layout_width="@dimen/item_width" android:layout_height="fill_parent" android:singleLine="true" />
+        <TextView android:layout_gravity="bottom" android:layout_width="@dimen/divider" android:layout_height="fill_parent" />
+        <TextView android:textColor="@color/black" android:gravity="center" android:id="@id/item10" android:layout_width="@dimen/item_width" android:layout_height="fill_parent" android:singleLine="true" />
+        <TextView android:layout_gravity="bottom" android:layout_width="@dimen/divider" android:layout_height="fill_parent" />
+        <TextView android:textColor="@color/black" android:gravity="center" android:id="@id/item11" android:layout_width="@dimen/item_width" android:layout_height="fill_parent" android:singleLine="true" />
+        <TextView android:layout_gravity="bottom" android:layout_width="@dimen/divider" android:layout_height="fill_parent" />
+        <TextView android:textColor="@color/black" android:gravity="center" android:id="@id/item12" android:layout_width="@dimen/item_width" android:layout_height="fill_parent" android:singleLine="true" />
+        <TextView android:layout_gravity="bottom" android:layout_width="@dimen/divider" android:layout_height="fill_parent" />
+        <TextView android:textColor="@color/black" android:gravity="center" android:id="@id/item13" android:layout_width="@dimen/item_width" android:layout_height="fill_parent" android:singleLine="true" />
+        <TextView android:layout_gravity="bottom" android:layout_width="@dimen/divider" android:layout_height="fill_parent" />
+        <TextView android:textColor="@color/black" android:gravity="center" android:id="@id/item14" android:layout_width="@dimen/item_width" android:layout_height="fill_parent" android:singleLine="true" />
+        <TextView android:layout_gravity="bottom" android:layout_width="@dimen/divider" android:layout_height="fill_parent" />
+        <TextView android:textColor="@color/black" android:gravity="center" android:id="@id/item15" android:layout_width="@dimen/item_width" android:layout_height="fill_parent" android:singleLine="true" />
+        <TextView android:layout_gravity="bottom" android:layout_width="@dimen/divider" android:layout_height="fill_parent" />
+        <TextView android:textColor="@color/black" android:gravity="center" android:id="@id/item16" android:layout_width="@dimen/item_width" android:layout_height="fill_parent" android:singleLine="true" />
+        <TextView android:layout_gravity="bottom" android:layout_width="@dimen/divider" android:layout_height="fill_parent" />
+    </LinearLayout>
+</LinearLayout>

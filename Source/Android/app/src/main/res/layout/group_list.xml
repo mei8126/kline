@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/group_root" android:background="@drawable/day_popwindow_bg" android:padding="@dimen/margin5" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/lvGroup" android:fadingEdgeLength="0.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/margin20" android:layout_marginBottom="@dimen/margin5" android:listSelector="@color/transparent" android:drawSelectorOnTop="true" android:cacheColorHint="#00000000" android:divider="#00000000" android:dividerHeight="@dimen/divider" android:layout_weight="0.0" />
+</LinearLayout>

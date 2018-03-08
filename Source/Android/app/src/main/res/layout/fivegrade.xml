@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.demo.view.PullToRefresh android:id="@id/refresh_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/refresh_head" />
+    <com.demo.view.PullableScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/root" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin5">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/margin35" android:baselineAligned="true">
+                <TextView android:textColor="@color/black" android:gravity="center" android:id="@id/sale5_lable" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/sale5" android:layout_weight="2.0" />
+                <TextView android:gravity="center" android:id="@id/sale5_price" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0" />
+                <TextView android:gravity="center" android:id="@id/sale5_volume" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0" />
+                <TextView android:gravity="center" android:id="@id/sale5_upordown" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0" />
+            </LinearLayout>
+            <TextView android:id="@id/divider1" android:background="@color/divider" android:layout_width="fill_parent" android:layout_height="@dimen/divider" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/margin35" android:baselineAligned="true">
+                <TextView android:textColor="@color/black" android:gravity="center" android:id="@id/sale4_lable" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/sale4" android:layout_weight="2.0" />
+                <TextView android:gravity="center" android:id="@id/sale4_price" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0" />
+                <TextView android:gravity="center" android:id="@id/sale4_volume" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0" />
+                <TextView android:gravity="center" android:id="@id/sale4_upordown" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0" />
+            </LinearLayout>
+            <TextView android:id="@id/divider2" android:background="@color/divider" android:layout_width="fill_parent" android:layout_height="@dimen/divider" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/margin35" android:baselineAligned="true">
+                <TextView android:textColor="@color/black" android:gravity="center" android:id="@id/sale3_lable" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/sale3" android:layout_weight="2.0" />
+                <TextView android:gravity="center" android:id="@id/sale3_price" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0" />
+                <TextView android:gravity="center" android:id="@id/sale3_volume" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0" />
+                <TextView android:gravity="center" android:id="@id/sale3_upordown" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0" />
+            </LinearLayout>
+            <TextView android:id="@id/divider3" android:background="@color/divider" android:layout_width="fill_parent" android:layout_height="@dimen/divider" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/margin35" android:baselineAligned="true">
+                <TextView android:textColor="@color/black" android:gravity="center" android:id="@id/sale2_lable" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/sale2" android:layout_weight="2.0" />
+                <TextView android:gravity="center" android:id="@id/sale2_price" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0" />
+                <TextView android:gravity="center" android:id="@id/sale2_volume" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0" />
+                <TextView android:gravity="center" android:id="@id/sale2_upordown" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0" />
+            </LinearLayout>
+            <TextView android:id="@id/divider4" android:background="@color/divider" android:layout_width="fill_parent" android:layout_height="@dimen/divider" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/margin35" android:baselineAligned="true">
+                <TextView android:textColor="@color/black" android:gravity="center" android:id="@id/sale1_lable" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/sale1" android:layout_weight="2.0" />
+                <TextView android:gravity="center" android:id="@id/sale1_price" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0" />
+                <TextView android:gravity="center" android:id="@id/sale1_volume" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0" />
+                <TextView android:gravity="center" android:id="@id/sale1_upordown" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0" />
+            </LinearLayout>
+            <TextView android:id="@id/divider5" android:background="@color/divider" android:layout_width="fill_parent" android:layout_height="@dimen/divider" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/margin35" android:baselineAligned="true">
+                <TextView android:textColor="@color/black" android:gravity="center" android:id="@id/buy1_lable" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/buy1" android:layout_weight="2.0" />
+                <TextView android:gravity="center" android:id="@id/buy1_price" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0" />
+                <TextView android:gravity="center" android:id="@id/buy1_volume" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0" />
+                <TextView android:gravity="center" android:id="@id/buy1_upordown" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0" />
+            </LinearLayout>
+            <TextView android:id="@id/divider6" android:background="@color/divider" android:layout_width="fill_parent" android:layout_height="@dimen/divider" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/margin35" android:baselineAligned="true">
+                <TextView android:textColor="@color/black" android:gravity="center" android:id="@id/buy2_lable" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/buy2" android:layout_weight="2.0" />
+                <TextView android:gravity="center" android:id="@id/buy2_price" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0" />
+                <TextView android:gravity="center" android:id="@id/buy2_volume" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0" />
+                <TextView android:gravity="center" android:id="@id/buy2_upordown" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0" />
+            </LinearLayout>
+            <TextView android:id="@id/divider7" android:background="@color/divider" android:layout_width="fill_parent" android:layout_height="@dimen/divider" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/margin35" android:baselineAligned="true">
+                <TextView android:textColor="@color/black" android:gravity="center" android:id="@id/buy3_lable" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/buy3" android:layout_weight="2.0" />
+                <TextView android:gravity="center" android:id="@id/buy3_price" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0" />
+                <TextView android:gravity="center" android:id="@id/buy3_volume" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0" />
+                <TextView android:gravity="center" android:id="@id/buy3_upordown" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0" />
+            </LinearLayout>
+            <TextView android:id="@id/divider8" android:background="@color/divider" android:layout_width="fill_parent" android:layout_height="@dimen/divider" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/margin35" android:baselineAligned="true">
+                <TextView android:textColor="@color/black" android:gravity="center" android:id="@id/buy4_lable" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/buy4" android:layout_weight="2.0" />
+                <TextView android:gravity="center" android:id="@id/buy4_price" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0" />
+                <TextView android:gravity="center" android:id="@id/buy4_volume" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0" />
+                <TextView android:gravity="center" android:id="@id/buy4_upordown" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0" />
+            </LinearLayout>
+            <TextView android:id="@id/divider9" android:background="@color/divider" android:layout_width="fill_parent" android:layout_height="@dimen/divider" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/margin35" android:baselineAligned="true">
+                <TextView android:textColor="@color/black" android:gravity="center" android:id="@id/buy5_lable" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/buy5" android:layout_weight="2.0" />
+                <TextView android:gravity="center" android:id="@id/buy5_price" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0" />
+                <TextView android:gravity="center" android:id="@id/buy5_volume" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0" />
+                <TextView android:gravity="center" android:id="@id/buy5_upordown" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.demo.view.PullableScrollView>
+</com.demo.view.PullToRefresh>

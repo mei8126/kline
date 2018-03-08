@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root" android:background="@color/whites" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/bar" android:background="@color/bar_color" android:layout_width="fill_parent" android:layout_height="@dimen/bar_height">
+        <Button android:id="@id/back" android:background="@drawable/back_click" android:layout_width="@dimen/margin25" android:layout_height="@dimen/margin25" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textColor="@color/white" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/userlogin" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/login_up">
+        <ImageView android:id="@id/userlogo" android:layout_width="@dimen/margin45" android:layout_height="@dimen/margin45" android:src="@drawable/unknown" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/dynamic" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="@dimen/radio_group_height" android:layout_marginTop="@dimen/margin10" android:layout_marginBottom="@dimen/margin10">
+            <com.demo.view.ClearEditText android:id="@id/username" android:background="@drawable/editshape" android:paddingLeft="@dimen/margin10" android:paddingTop="@dimen/margin5" android:paddingBottom="@dimen/margin5" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin25" android:layout_marginRight="@dimen/margin25" android:hint="@string/username" android:singleLine="true" android:maxLength="18" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="@dimen/radio_group_height" android:layout_marginTop="@dimen/margin10" android:layout_marginBottom="@dimen/margin10">
+            <com.demo.view.ClearEditText android:id="@id/password" android:background="@drawable/editshape" android:paddingLeft="@dimen/margin10" android:paddingTop="@dimen/margin5" android:paddingBottom="@dimen/margin5" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin25" android:layout_marginRight="@dimen/margin25" android:hint="@string/password" android:singleLine="true" android:maxLength="18" android:inputType="textPassword" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/margin5">
+            <TextView android:textColor="@color/bar_color" android:id="@id/forgetpass" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin25" android:text="忘记密码？" />
+        </LinearLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin45" android:layout_margin="@dimen/margin5">
+            <Button android:textColor="@color/white" android:id="@id/login_btn" android:background="@drawable/login_btn" android:layout_width="@dimen/login_bt_width" android:layout_height="fill_parent" android:text="@string/login" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/margin45" android:layout_margin="@dimen/margin5">
+            <Button android:textColor="@color/white" android:id="@id/regist_btn" android:background="@drawable/regist_bt" android:layout_width="@dimen/login_bt_width" android:layout_height="fill_parent" android:text="@string/wregist" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/margin25" android:layout_marginTop="@dimen/margin5">
+            <RelativeLayout android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin5" android:layout_weight="3.0">
+                <TextView android:background="@color/divider" android:layout_width="fill_parent" android:layout_height="@dimen/divider" />
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0">
+                <TextView android:textColor="@color/text_gray" android:gravity="center_vertical" android:id="@id/other_login" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin10" android:text="@string/otherloginway" />
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="@dimen/margin5" android:layout_weight="3.0">
+                <TextView android:background="@color/divider" android:layout_width="fill_parent" android:layout_height="@dimen/divider" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/qq_click" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="2.5">
+                <ImageView android:id="@id/qqimg" android:background="@drawable/qq_click" android:layout_width="@dimen/margin40" android:layout_height="@dimen/margin40" android:layout_centerInParent="true" />
+                <TextView android:textColor="@color/bar_color" android:id="@id/qqtext" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="@dimen/margin5" android:text="@string/qq" android:layout_below="@id/qqimg" android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/wb_click" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="2.0">
+                <ImageView android:id="@id/wbimg" android:background="@drawable/wb_click" android:layout_width="@dimen/margin40" android:layout_height="@dimen/margin40" android:layout_centerInParent="true" />
+                <TextView android:textColor="@color/bar_color" android:id="@id/wbtext" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="@dimen/margin5" android:text="@string/wb" android:layout_below="@id/wbimg" android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

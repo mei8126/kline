@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/bar" android:background="@color/bar_color" android:layout_width="fill_parent" android:layout_height="@dimen/bar_height">
+        <Button android:id="@id/back" android:background="@drawable/back_click" android:layout_width="@dimen/margin25" android:layout_height="@dimen/margin25" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textColor="@color/white" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stock_remind" android:layout_centerInParent="true" />
+        <Button android:id="@id/right" android:background="@drawable/right_click" android:layout_width="@dimen/margin25" android:layout_height="@dimen/margin25" android:layout_marginRight="@dimen/margin5" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.demo.tabs.TabHost android:id="@id/tab_host" android:background="@color/whites" android:layout_width="fill_parent" android:layout_height="@dimen/bar_height" />
+        <android.support.v4.view.ViewPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+</LinearLayout>

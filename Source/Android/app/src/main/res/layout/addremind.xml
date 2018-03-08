@@ -1,0 +1,936 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.kline"
+    android:id="@id/root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/group_item_height"
+                android:layout_marginTop="@dimen/margin15"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <AutoCompleteTextView
+                    android:id="@id/autotext"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="@dimen/margin5"
+                    android:background="@drawable/editshape"
+                    android:gravity="center"
+                    android:hint="股票代码"
+                    android:paddingLeft="@dimen/margin10"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/price"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/margin45"
+                android:layout_marginTop="@dimen/margin15"
+                android:background="@drawable/itemclick3"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@id/price_lable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin10"
+                    android:text="到价提醒"
+                    android:textColor="@color/bar_color" />
+
+                <ToggleButton
+                    android:id="@id/price_tog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin10"
+                    android:background="@color/transparent"
+                    android:button="@drawable/checkbox_selector"
+                    android:checked="false"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@id/price_set"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/radio_group_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin5"
+                        android:layout_weight="4.0"
+                        android:text="高于警戒价提醒"
+                        android:textColor="@color/gray" />
+
+                    <com.demo.view.ClearEditText
+                        android:id="@id/price_up"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="@dimen/margin5"
+                        android:layout_weight="6.0"
+                        android:background="@drawable/editshape"
+                        android:gravity="center"
+                        android:hint="请输入价格上限"
+                        android:paddingLeft="@dimen/margin10"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textsize" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/divider"
+                    android:background="@color/transparent" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/radio_group_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin5"
+                        android:layout_weight="4.0"
+                        android:text="低于警戒价提醒"
+                        android:textColor="@color/gray" />
+
+                    <com.demo.view.ClearEditText
+                        android:id="@id/price_down"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="@dimen/margin5"
+                        android:layout_weight="6.0"
+                        android:background="@drawable/editshape"
+                        android:gravity="center"
+                        android:hint="请输入价格下限"
+                        android:paddingLeft="@dimen/margin10"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textsize" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/divider"
+                    android:background="@color/transparent" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/radio_group_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin5"
+                        android:layout_weight="4.0"
+                        android:text="自动续订"
+                        android:textColor="@color/gray" />
+
+                    <com.demo.view.ClearEditText
+                        android:id="@id/price_continue"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="@dimen/margin5"
+                        android:layout_weight="6.0"
+                        android:background="@drawable/editshape"
+                        android:gravity="center"
+                        android:hint="续订值"
+                        android:paddingLeft="@dimen/margin10"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textsize" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/divider"
+                    android:background="@color/transparent" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/radio_group_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin5"
+                        android:layout_weight="4.0"
+                        android:text="有效期"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:id="@id/price_validity"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="@dimen/margin5"
+                        android:layout_weight="6.0"
+                        android:background="@drawable/editshape"
+                        android:clickable="true"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:hint="有效日期"
+                        android:paddingLeft="@dimen/margin10"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textsize" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/divider"
+                    android:background="@color/transparent" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/radio_group_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/margin10"
+                        android:text="短信提醒"
+                        android:textColor="@color/gray" />
+
+                    <ToggleButton
+                        android:id="@id/smsprice_tog"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/margin10"
+                        android:background="@color/transparent"
+                        android:button="@drawable/checkbox_selector"
+                        android:checked="false"
+                        android:text=""
+                        android:textOff=""
+                        android:textOn="" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/divider"
+                    android:background="@color/transparent"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@id/timer"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/margin45"
+                android:layout_marginTop="@dimen/margin20"
+                android:background="@drawable/itemclick3"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@id/timer_lable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin10"
+                    android:text="定时提醒"
+                    android:textColor="@color/bar_color" />
+
+                <ToggleButton
+                    android:id="@id/timer_tog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin10"
+                    android:background="@color/transparent"
+                    android:button="@drawable/checkbox_selector"
+                    android:checked="false"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@id/timer_set"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/radio_group_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin5"
+                        android:layout_weight="4.0"
+                        android:text="定时1"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:id="@id/timer1"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="@dimen/margin5"
+                        android:layout_weight="6.0"
+                        android:background="@drawable/editshape"
+                        android:clickable="true"
+                        android:editable="false"
+                        android:gravity="center"
+                        android:hint="时间值"
+                        android:paddingLeft="@dimen/margin10"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textsize" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/divider"
+                    android:background="@color/transparent" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/radio_group_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin5"
+                        android:layout_weight="4.0"
+                        android:text="定时2"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:id="@id/timer2"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="@dimen/margin5"
+                        android:layout_weight="6.0"
+                        android:background="@drawable/editshape"
+                        android:clickable="true"
+                        android:editable="false"
+                        android:gravity="center"
+                        android:hint="时间值"
+                        android:paddingLeft="@dimen/margin10"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textsize" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/divider"
+                    android:background="@color/transparent" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/radio_group_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin5"
+                        android:layout_weight="4.0"
+                        android:text="定时3"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:id="@id/timer3"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="@dimen/margin5"
+                        android:layout_weight="6.0"
+                        android:background="@drawable/editshape"
+                        android:clickable="true"
+                        android:editable="false"
+                        android:gravity="center"
+                        android:hint="时间值"
+                        android:paddingLeft="@dimen/margin10"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textsize" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/divider"
+                    android:background="@color/transparent" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/margin40"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@id/monday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/margin10"
+                        android:text="星期一"
+                        android:textColor="@color/gray" />
+
+                    <com.demo.view.SmoothCheckBox
+                        android:id="@id/checkbox1"
+                        android:layout_width="@dimen/margin25"
+                        android:layout_height="@dimen/margin25"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/margin10"
+                        android:checked="false"
+                        app:color_checked="@color/whitesmoke"
+                        app:color_tick="@color/bar_color"
+                        app:color_unchecked_stroke="@color/text_gray" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/divider"
+                    android:background="@color/transparent" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/margin40"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@id/tuesday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/margin10"
+                        android:text="星期二"
+                        android:textColor="@color/gray" />
+
+                    <com.demo.view.SmoothCheckBox
+                        android:id="@id/checkbox2"
+                        android:layout_width="@dimen/margin25"
+                        android:layout_height="@dimen/margin25"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/margin10"
+                        android:checked="false"
+                        app:color_checked="@color/whitesmoke"
+                        app:color_tick="@color/bar_color"
+                        app:color_unchecked_stroke="@color/text_gray" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/divider"
+                    android:background="@color/transparent" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/margin40"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@id/wednesday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/margin10"
+                        android:text="星期三"
+                        android:textColor="@color/gray" />
+
+                    <com.demo.view.SmoothCheckBox
+                        android:id="@id/checkbox3"
+                        android:layout_width="@dimen/margin25"
+                        android:layout_height="@dimen/margin25"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/margin10"
+                        android:checked="false"
+                        app:color_checked="@color/whitesmoke"
+                        app:color_tick="@color/bar_color"
+                        app:color_unchecked_stroke="@color/text_gray" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/divider"
+                    android:background="@color/transparent" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/margin40"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@id/thursday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/margin10"
+                        android:text="星期四"
+                        android:textColor="@color/gray" />
+
+                    <com.demo.view.SmoothCheckBox
+                        android:id="@id/checkbox4"
+                        android:layout_width="@dimen/margin25"
+                        android:layout_height="@dimen/margin25"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/margin10"
+                        android:checked="false"
+                        app:color_checked="@color/whitesmoke"
+                        app:color_tick="@color/bar_color"
+                        app:color_unchecked_stroke="@color/text_gray" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/divider"
+                    android:background="@color/transparent" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/margin40"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@id/friday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/margin10"
+                        android:text="星期五"
+                        android:textColor="@color/gray" />
+
+                    <com.demo.view.SmoothCheckBox
+                        android:id="@id/checkbox5"
+                        android:layout_width="@dimen/margin25"
+                        android:layout_height="@dimen/margin25"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/margin10"
+                        android:checked="false"
+                        app:color_checked="@color/whitesmoke"
+                        app:color_tick="@color/bar_color"
+                        app:color_unchecked_stroke="@color/text_gray" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/divider"
+                    android:background="@color/transparent" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/radio_group_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin5"
+                        android:layout_weight="4.0"
+                        android:text="对比价"
+                        android:textColor="@color/gray" />
+
+                    <com.demo.view.ClearEditText
+                        android:id="@id/timer_compare"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="@dimen/margin5"
+                        android:layout_weight="6.0"
+                        android:background="@drawable/editshape"
+                        android:gravity="center"
+                        android:hint="对比价格"
+                        android:paddingLeft="@dimen/margin10"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textsize" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/divider"
+                    android:background="@color/transparent" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/radio_group_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/margin10"
+                        android:text="短信提醒"
+                        android:textColor="@color/gray" />
+
+                    <ToggleButton
+                        android:id="@id/smstimer_tog"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/margin10"
+                        android:background="@color/transparent"
+                        android:button="@drawable/checkbox_selector"
+                        android:checked="false"
+                        android:text=""
+                        android:textOff=""
+                        android:textOn="" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/divider"
+                    android:background="@color/transparent"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@id/period"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/margin45"
+                android:layout_marginTop="@dimen/margin20"
+                android:background="@drawable/itemclick3"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@id/period_lable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin10"
+                    android:text="时段提醒"
+                    android:textColor="@color/bar_color" />
+
+                <ToggleButton
+                    android:id="@id/period_tog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin10"
+                    android:background="@color/transparent"
+                    android:button="@drawable/checkbox_selector"
+                    android:checked="false"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@id/period_set"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/radio_group_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin5"
+                        android:layout_weight="4.0"
+                        android:text="时间间隔"
+                        android:textColor="@color/gray" />
+
+                    <com.demo.view.ClearEditText
+                        android:id="@id/period_interval"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="@dimen/margin5"
+                        android:layout_weight="6.0"
+                        android:background="@drawable/editshape"
+                        android:gravity="center"
+                        android:hint="时间间隔(分钟数值)"
+                        android:paddingLeft="@dimen/margin10"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textsize" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/divider"
+                    android:background="@color/transparent" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/radio_group_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin5"
+                        android:layout_weight="4.0"
+                        android:text="对比价"
+                        android:textColor="@color/gray" />
+
+                    <com.demo.view.ClearEditText
+                        android:id="@id/period_compare"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="@dimen/margin5"
+                        android:layout_weight="6.0"
+                        android:background="@drawable/editshape"
+                        android:gravity="center"
+                        android:hint="对比价格"
+                        android:paddingLeft="@dimen/margin10"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textsize" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/divider"
+                    android:background="@color/transparent" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/radio_group_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin5"
+                        android:layout_weight="4.0"
+                        android:text="有效期"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:id="@id/period_validity"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="@dimen/margin5"
+                        android:layout_weight="6.0"
+                        android:background="@drawable/editshape"
+                        android:clickable="true"
+                        android:editable="false"
+                        android:gravity="center"
+                        android:hint="有效日期"
+                        android:paddingLeft="@dimen/margin10"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textsize" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/divider"
+                    android:background="@color/transparent" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/radio_group_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/margin10"
+                        android:text="短信提醒"
+                        android:textColor="@color/gray" />
+
+                    <ToggleButton
+                        android:id="@id/smsperiod_tog"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/margin10"
+                        android:background="@color/transparent"
+                        android:button="@drawable/checkbox_selector"
+                        android:checked="false"
+                        android:text=""
+                        android:textOff=""
+                        android:textOn="" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/divider"
+                    android:background="@color/transparent"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@id/noremind"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/margin45"
+                android:layout_marginTop="@dimen/margin20"
+                android:background="@drawable/itemclick3"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@id/noremind_lable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin10"
+                    android:text="免打扰设置"
+                    android:textColor="@color/bar_color" />
+
+                <ToggleButton
+                    android:id="@id/noremind_tog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin10"
+                    android:background="@color/transparent"
+                    android:button="@drawable/checkbox_selector"
+                    android:checked="false"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@id/noremind_set"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/radio_group_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin5"
+                        android:layout_weight="4.0"
+                        android:text="开始时间"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:id="@id/noremind_start"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="@dimen/margin5"
+                        android:layout_weight="6.0"
+                        android:background="@drawable/editshape"
+                        android:clickable="true"
+                        android:editable="false"
+                        android:gravity="center"
+                        android:hint="开始时间值（00:00）"
+                        android:paddingLeft="@dimen/margin10"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textsize" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/divider"
+                    android:background="@color/transparent" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/radio_group_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin5"
+                        android:layout_weight="4.0"
+                        android:text="结束时间"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:id="@id/noremind_end"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="@dimen/margin5"
+                        android:layout_weight="6.0"
+                        android:background="@drawable/editshape"
+                        android:clickable="true"
+                        android:editable="false"
+                        android:gravity="center"
+                        android:hint="结束时间值（00:00）"
+                        android:paddingLeft="@dimen/margin10"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textsize" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/divider"
+                    android:background="@color/transparent" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/group_item_height"
+                android:layout_marginBottom="@dimen/margin30"
+                android:layout_marginTop="@dimen/margin25">
+
+                <Button
+                    android:id="@id/save"
+                    android:layout_width="@dimen/login_bt_width"
+                    android:layout_height="fill_parent"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/login_btn"
+                    android:text="提交设置"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

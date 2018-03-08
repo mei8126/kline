@@ -1,16 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:id="@id/root" android:background="@color/whites" android:layout_width="wrap_content" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:layout_width="wrap_content" android:layout_height="fill_parent">
-        <RadioGroup android:gravity="center_vertical" android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/radio_group" android:background="@color/whitesmoke" android:focusable="true" android:layout_width="fill_parent" android:layout_height="@dimen/radio_group_height" android:layout_marginBottom="0.0dip" android:layout_alignParentBottom="true">
-            <RadioButton android:textSize="@dimen/textsize" android:textColor="@drawable/nav_text" android:id="@id/self" android:background="@color/transparent" android:layout_marginTop="@dimen/divider2" android:button="@null" android:text="@string/self" android:drawableTop="@drawable/nav_self" style="@style/main_tab_bottom" />
-            <RadioButton android:textSize="@dimen/textsize" android:textColor="@drawable/nav_text" android:id="@id/range" android:background="@color/transparent" android:layout_marginTop="@dimen/divider2" android:text="@string/range" android:drawableTop="@drawable/nav_range" style="@style/main_tab_bottom" />
-            <RadioButton android:textSize="@dimen/textsize" android:textColor="@drawable/nav_text" android:id="@id/mintime" android:background="@color/transparent" android:layout_marginTop="2.0dip" android:text="@string/mintime" android:drawableTop="@drawable/nav_mintime" style="@style/main_tab_bottom" />
-            <RadioButton android:textSize="@dimen/textsize" android:textColor="@drawable/nav_text" android:id="@id/kline" android:background="@color/transparent" android:layout_marginTop="@dimen/divider2" android:text="@string/kline" android:drawableTop="@drawable/nav_kline" style="@style/main_tab_bottom" />
-            <RadioButton android:textSize="@dimen/textsize" android:textColor="@drawable/nav_text" android:id="@id/market" android:background="@color/transparent" android:layout_marginTop="@dimen/divider2" android:text="@string/market" android:drawableTop="@drawable/nav_market" style="@style/main_tab_bottom" />
-            <RadioButton android:textSize="@dimen/textsize" android:textColor="@drawable/nav_text" android:id="@id/community" android:background="@color/transparent" android:layout_marginTop="@dimen/divider2" android:text="@string/community" android:drawableTop="@drawable/nav_community" style="@style/main_tab_bottom" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/root"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:background="@color/whites"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent">
+
+        <RadioGroup
+            android:id="@id/radio_group"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/radio_group_height"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="0.0dip"
+            android:background="@color/whitesmoke"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@id/self"
+                style="@style/main_tab_bottom"
+                android:layout_marginTop="@dimen/divider2"
+                android:background="@color/transparent"
+                android:button="@null"
+                android:drawableTop="@drawable/nav_self"
+                android:text="@string/self"
+                android:textColor="@drawable/nav_text"
+                android:textSize="@dimen/textsize" />
+
+            <RadioButton
+                android:id="@id/range"
+                style="@style/main_tab_bottom"
+                android:layout_marginTop="@dimen/divider2"
+                android:background="@color/transparent"
+                android:drawableTop="@drawable/nav_range"
+                android:text="@string/range"
+                android:textColor="@drawable/nav_text"
+                android:textSize="@dimen/textsize" />
+
+            <RadioButton
+                android:id="@id/mintime"
+                style="@style/main_tab_bottom"
+                android:layout_marginTop="2.0dip"
+                android:background="@color/transparent"
+                android:drawableTop="@drawable/nav_mintime"
+                android:text="@string/mintime"
+                android:textColor="@drawable/nav_text"
+                android:textSize="@dimen/textsize" />
+
+            <RadioButton
+                android:id="@id/kline"
+                style="@style/main_tab_bottom"
+                android:layout_marginTop="@dimen/divider2"
+                android:background="@color/transparent"
+                android:drawableTop="@drawable/nav_kline"
+                android:text="@string/kline"
+                android:textColor="@drawable/nav_text"
+                android:textSize="@dimen/textsize" />
+
+            <RadioButton
+                android:id="@id/market"
+                style="@style/main_tab_bottom"
+                android:layout_marginTop="@dimen/divider2"
+                android:background="@color/transparent"
+                android:drawableTop="@drawable/nav_market"
+                android:text="@string/market"
+                android:textColor="@drawable/nav_text"
+                android:textSize="@dimen/textsize" />
+
+            <RadioButton
+                android:id="@id/community"
+                style="@style/main_tab_bottom"
+                android:layout_marginTop="@dimen/divider2"
+                android:background="@color/transparent"
+                android:drawableTop="@drawable/nav_community"
+                android:text="@string/community"
+                android:textColor="@drawable/nav_text"
+                android:textSize="@dimen/textsize" />
         </RadioGroup>
-        <View android:id="@id/tab_bar" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="@dimen/divider" android:layout_above="@id/radio_group" />
-        <android.support.v4.view.ViewPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/tab_bar" />
+
+        <View
+            android:id="@id/tab_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/divider"
+            android:layout_above="@id/radio_group"
+            android:background="@color/transparent" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@id/pager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/tab_bar" />
     </RelativeLayout>
 </LinearLayout>

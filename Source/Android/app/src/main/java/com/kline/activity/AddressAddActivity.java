@@ -18,9 +18,12 @@ import com.kline.http.SpotsCallback;
 import com.kline.msg.BaseRespMsg;
 import com.kline.widget.ClearEditText;
 import com.kline.widget.HtToolBar;
-import com.lidroid.xutils.ViewUtils;
-import com.lidroid.xutils.view.annotation.ViewInject;
-import com.lidroid.xutils.view.annotation.event.OnClick;
+
+
+import org.xutils.view.annotation.ContentView;
+import org.xutils.view.annotation.Event;
+import org.xutils.view.annotation.ViewInject;
+import org.xutils.x;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -33,6 +36,7 @@ import javax.xml.parsers.SAXParserFactory;
 
 import okhttp3.Response;
 
+@ContentView(R.layout.activity_address_add)
 public class AddressAddActivity extends BaseActivity {
 
     private OptionsPickerView mCityPickerView;
@@ -62,13 +66,13 @@ public class AddressAddActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_address_add);
-        ViewUtils.inject(this);
+        //setContentView(R.layout.activity_address_add);
+        x.view().inject(this);
         initToolbar();
         init();
     }
 
-    @OnClick(R.id.ll_city_picker)
+    @Event(type = View.OnClickListener.class,value = R.id.ll_city_picker)
     public void showCityPickerViwe(View view) {
         mCityPickerView.show();
     }

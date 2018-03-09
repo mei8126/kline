@@ -2,6 +2,7 @@ package com.kline.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.ViewUtils;
 import android.text.TextUtils;
 import android.view.View;
 
@@ -16,9 +17,11 @@ import com.kline.utils.DESUtil;
 import com.kline.utils.ToastUtils;
 import com.kline.widget.ClearEditText;
 import com.kline.widget.HtToolBar;
-import com.lidroid.xutils.ViewUtils;
-import com.lidroid.xutils.view.annotation.ViewInject;
-import com.lidroid.xutils.view.annotation.event.OnClick;
+
+import org.xutils.view.annotation.ContentView;
+import org.xutils.view.annotation.Event;
+import org.xutils.view.annotation.ViewInject;
+import org.xutils.x;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -29,6 +32,7 @@ import okhttp3.Response;
 /**
  * Created by mei on 2016/3/23.
  */
+@ContentView(R.layout.activity_login)
 public class LoginActivity extends BaseActivity {
 
     @ViewInject(R.id.toolbar)
@@ -46,7 +50,7 @@ public class LoginActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        ViewUtils.inject(this);
+        x.view().inject(this);
         initToolbar();
     }
 
@@ -65,7 +69,7 @@ public class LoginActivity extends BaseActivity {
         finish();
     }
 
-    @OnClick(R.id.btn_login)
+    @Event(type = View.OnClickListener.class,value = R.id.btn_login)
     public void login(View view) {
         String phone = mTextPhone.getText().toString().trim();
         if(TextUtils.isEmpty(phone)) {
@@ -109,7 +113,8 @@ public class LoginActivity extends BaseActivity {
         });
     }
 
-    @OnClick(R.id.txt_toReg)
+
+    @Event(type = View.OnClickListener.class, value = R.id.txt_toReg)
     public void gotoReg(View view) {
         Intent regIntent = new Intent(this, RegActivity.class);
         startActivity(regIntent);

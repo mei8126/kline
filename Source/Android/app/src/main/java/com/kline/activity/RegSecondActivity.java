@@ -2,6 +2,7 @@ package com.kline.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.ViewUtils;
 import android.text.Html;
 import android.text.TextUtils;
 import android.view.View;
@@ -21,11 +22,12 @@ import com.kline.utils.ManifestUtil;
 import com.kline.utils.ToastUtils;
 import com.kline.widget.ClearEditText;
 import com.kline.widget.HtToolBar;
-import com.lidroid.xutils.ViewUtils;
-import com.lidroid.xutils.view.annotation.ViewInject;
-import com.lidroid.xutils.view.annotation.event.OnClick;
 
 import org.json.JSONObject;
+import org.xutils.view.annotation.ContentView;
+import org.xutils.view.annotation.Event;
+import org.xutils.view.annotation.ViewInject;
+import org.xutils.x;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -36,6 +38,7 @@ import cn.smssdk.utils.SMSLog;
 import dmax.dialog.SpotsDialog;
 import okhttp3.Response;
 
+@ContentView(R.layout.activity_reg_second)
 public class RegSecondActivity extends BaseActivity {
 
     @ViewInject(R.id.toolbar)
@@ -62,8 +65,8 @@ public class RegSecondActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_reg_second);
-        ViewUtils.inject(this);
+        // setContentView(R.layout.activity_reg_second);
+        x.view().inject(this);
 
         initToolbar();
         checkCode();
@@ -121,7 +124,8 @@ public class RegSecondActivity extends BaseActivity {
         dialog.show();
     }
 
-    @OnClick(R.id.btn_reSend)
+
+    @Event(type = View.OnClickListener.class, value = R.id.btn_reSend)
     public void reSendCode(View view) {
         SMSSDK.getVerificationCode("+"+countryCode, phone);
         countTimerView = new CountTimerView(mBtnResend,R.string.smssdk_resend_identify_code);

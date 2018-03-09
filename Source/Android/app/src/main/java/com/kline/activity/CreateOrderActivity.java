@@ -25,19 +25,22 @@ import com.kline.msg.BaseRespMsg;
 import com.kline.msg.CreateOrderRespMsg;
 import com.kline.utils.CartProvider;
 import com.kline.utils.JSONUtil;
-import com.lidroid.xutils.ViewUtils;
-import com.lidroid.xutils.view.annotation.ViewInject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.lidroid.xutils.view.annotation.event.OnClick;
 import com.pingplusplus.android.PaymentActivity;
+
+import org.xutils.view.annotation.ContentView;
+import org.xutils.view.annotation.Event;
+import org.xutils.view.annotation.ViewInject;
+import org.xutils.x;
 
 import okhttp3.Response;
 
+@ContentView(R.layout.activity_create_order)
 public class CreateOrderActivity extends BaseActivity implements View.OnClickListener {
 
     /**
@@ -110,8 +113,8 @@ public class CreateOrderActivity extends BaseActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_create_order);
-        ViewUtils.inject(this);
+        //setContentView(R.layout.activity_create_order);
+        x.view().inject(this);
         showData();
         init();
     }
@@ -164,7 +167,7 @@ public class CreateOrderActivity extends BaseActivity implements View.OnClickLis
         }
     }
 
-    @OnClick(R.id.btn_createOrder)
+    @Event(type = View.OnClickListener.class, value = R.id.btn_createOrder)
     public void createNewOrder(View view){
         postNewOrder();
     }

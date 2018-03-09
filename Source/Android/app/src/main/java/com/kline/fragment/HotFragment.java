@@ -17,13 +17,18 @@ import com.kline.adapter.HotWaresAdapter;
 import com.kline.bean.Wares;
 import com.kline.bean.WaresPage;
 import com.kline.utils.Pager;
-import com.lidroid.xutils.view.annotation.ViewInject;
+
+
+import org.xutils.view.annotation.ContentView;
+import org.xutils.view.annotation.ViewInject;
+import org.xutils.x;
 
 import java.util.List;
 
 /**
  * Created by mei on 2016/3/1.
  */
+@ContentView(R.layout.fragment_hot)
 public class HotFragment extends BaseFragment {
 
     private static final String TAG = HotFragment.class.getSimpleName();
@@ -35,7 +40,8 @@ public class HotFragment extends BaseFragment {
 
     @Override
     public View createView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_hot, container, false);
+        //View view = inflater.inflate(R.layout.fragment_hot, container, false);
+        View view = x.view().inject(this, inflater, container);
         return view;
     }
 

@@ -11,7 +11,8 @@ import android.view.ViewGroup;
 import com.kline.common.HtReaderApp;
 import com.kline.activity.LoginActivity;
 import com.kline.bean.User;
-import com.lidroid.xutils.ViewUtils;
+
+import org.xutils.x;
 
 /**
  * Created by mei on 2016/3/21.
@@ -23,7 +24,7 @@ public abstract class BaseFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = createView(inflater,container,savedInstanceState);
-        ViewUtils.inject(this, view);
+        //x.view().inject(this, view);
         initToolBar();
         init();
         return view;

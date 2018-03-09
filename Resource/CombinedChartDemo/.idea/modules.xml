@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CombinedChartDemo.iml" filepath="$PROJECT_DIR$/CombinedChartDemo.iml" />
+      <module fileurl="file://F:\stock\CombinedChartDemo\IMS_HJG.iml" filepath="F:\stock\CombinedChartDemo\IMS_HJG.iml" />
+      <module fileurl="file://F:\..\IMS_SDK_NEW\JbtLib\JbtLib.iml" filepath="F:\..\IMS_SDK_NEW\JbtLib\JbtLib.iml" />
+      <module fileurl="file://F:\..\IMS_SDK_NEW\JbtLib\JbtSDK\JbtSDK.iml" filepath="F:\..\IMS_SDK_NEW\JbtLib\JbtSDK\JbtSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://F:\stock\CombinedChartDemo\iMS_HJG\iMS_HJG.iml" filepath="F:\stock\CombinedChartDemo\iMS_HJG\iMS_HJG.iml" />
+      <module fileurl="file://F:\stock\CombinedChartDemo\utilDB\utilDB.iml" filepath="F:\stock\CombinedChartDemo\utilDB\utilDB.iml" />
+    </modules>
+  </component>
+</project>

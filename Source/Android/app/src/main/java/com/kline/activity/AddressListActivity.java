@@ -16,8 +16,10 @@ import com.kline.http.OkHttpHelper;
 import com.kline.http.SpotsCallback;
 import com.kline.msg.BaseRespMsg;
 import com.kline.widget.HtToolBar;
-import com.lidroid.xutils.ViewUtils;
-import com.lidroid.xutils.view.annotation.ViewInject;
+
+import org.xutils.view.annotation.ContentView;
+import org.xutils.view.annotation.ViewInject;
+import org.xutils.x;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -26,6 +28,7 @@ import java.util.Map;
 
 import okhttp3.Response;
 
+@ContentView(R.layout.activity_address_list)
 public class AddressListActivity extends BaseActivity {
 
     @ViewInject(R.id.toolbar)
@@ -41,7 +44,7 @@ public class AddressListActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_address_list);
-        ViewUtils.inject(this);
+        x.view().inject(this);
         initToolbar();
         initAddress();
     }

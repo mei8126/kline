@@ -33,7 +33,11 @@ import com.kline.bean.WaresPage;
 import com.kline.http.OkHttpHelper;
 import com.kline.http.SimpleCallback;
 import com.kline.http.SpotsCallback;
-import com.lidroid.xutils.view.annotation.ViewInject;
+
+
+import org.xutils.view.annotation.ContentView;
+import org.xutils.view.annotation.ViewInject;
+import org.xutils.x;
 
 import java.io.IOException;
 import java.util.List;
@@ -44,6 +48,7 @@ import okhttp3.Response;
 /**
  * Created by mei on 2016/3/1.
  */
+@ContentView(R.layout.fragment_category)
 public class CategoryFragment extends BaseFragment {
 
     @ViewInject(R.id.recyclerview_category)
@@ -73,7 +78,8 @@ public class CategoryFragment extends BaseFragment {
     @Override
     public View createView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_category, container, false);
+        //View view = inflater.inflate(R.layout.fragment_category, container, false);
+        View view = x.view().inject(this, inflater, container);
         return view;
     }
 

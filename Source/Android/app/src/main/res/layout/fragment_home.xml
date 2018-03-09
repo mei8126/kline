@@ -13,15 +13,6 @@
         android:minHeight="?attr/actionBarSize"
         app:isShowSearchView="true" />
 
-    <com.daimajia.slider.library.SliderLayout
-        android:id="@+id/slider"
-        android:layout_width="match_parent"
-        android:layout_height="130dp"
-        app:auto_cycle="true"
-        app:indicator_visibility="visible"
-        app:pager_animation="Accordion"
-        app:pager_animation_span="1100" />
-
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"

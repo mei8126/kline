@@ -19,14 +19,17 @@ import com.kline.bean.Wares;
 import com.kline.bean.WaresPage;
 import com.kline.utils.Pager;
 import com.kline.widget.HtToolBar;
-import com.lidroid.xutils.ViewUtils;
-import com.lidroid.xutils.view.annotation.ViewInject;
+
+import org.xutils.view.annotation.ContentView;
+import org.xutils.view.annotation.ViewInject;
+import org.xutils.x;
 
 import java.util.List;
 
 /**
  * Created by mei on 2016/3/20.
  */
+@ContentView(R.layout.activity_ware_list_layout)
 public class WareListActivity extends BaseActivity implements Pager.OnPageListener<Wares> {
 
     public static final int TAG_DEFAULT=0;
@@ -60,8 +63,8 @@ public class WareListActivity extends BaseActivity implements Pager.OnPageListen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ware_list_layout);
-        ViewUtils.inject(this);
+        //setContentView(R.layout.activity_ware_list_layout);
+        x.view().inject(this);
 
         campaignId=getIntent().getLongExtra(Contants.COMPAINGAIN_ID,0);
         initToolbar();

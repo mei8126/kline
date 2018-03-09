@@ -1,12 +1,10 @@
 package com.kline.stock.bean;
 
-import com.kline.stock.bean.StockData;
-
 /**
  * Created by mei on 2018/3/5.
  */
 
-public class QQStockData extends StockData {
+public class QQStockData extends StockRealTimeData {
     // 未知
     private String unknow;
     // 外盘

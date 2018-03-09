@@ -17,15 +17,20 @@ import com.kline.activity.MyFavoriteActivity;
 import com.kline.activity.MyOrderActivity;
 import com.kline.R;
 import com.kline.bean.User;
-import com.lidroid.xutils.view.annotation.ViewInject;
-import com.lidroid.xutils.view.annotation.event.OnClick;
+
 import com.squareup.picasso.Picasso;
+
+import org.xutils.view.annotation.ContentView;
+import org.xutils.view.annotation.Event;
+import org.xutils.view.annotation.ViewInject;
+import org.xutils.x;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * Created by mei on 2016/3/1.
  */
+@ContentView(R.layout.fragment_mine)
 public class MineFragment extends BaseFragment {
 
     @ViewInject(R.id.img_head)
@@ -37,7 +42,8 @@ public class MineFragment extends BaseFragment {
 
     @Override
     public View createView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_mine, container, false);
+        //return inflater.inflate(R.layout.fragment_mine, container, false);
+        return x.view().inject(this, inflater, container);
     }
 
     @Override
@@ -46,14 +52,15 @@ public class MineFragment extends BaseFragment {
         showUser(user);
     }
 
-    @OnClick(value = {R.id.img_head, R.id.txt_username})
+    @Event(type = View.OnClickListener.class, value = {R.id.img_head, R.id.txt_username})
     public void toLogin(View view) {
         if(HtReaderApp.getInstance().getUser() == null) {
             Intent intent = new Intent(getContext(), LoginActivity.class);
             startActivityForResult(intent, Contants.REQUEST_CODE);
         }
     }
-    @OnClick(R.id.btn_logout)
+
+    @Event(type = View.OnClickListener.class, value = R.id.btn_logout)
     public void logout(View view) {
         HtReaderApp.getInstance().clearUser();
         showUser(null);
@@ -82,20 +89,19 @@ public class MineFragment extends BaseFragment {
         Picasso.with(getContext()).load(url).into(mImageHead);
     }
 
-    @OnClick(R.id.txt_my_orders)
+    @Event(type = View.OnClickListener.class, value = R.id.txt_my_orders)
     public void toMyOrderActivity(View view){
 
         startActivity(new Intent(getActivity(), MyOrderActivity.class), true);
     }
 
-
-    @OnClick(R.id.txt_my_address)
+    @Event(type = View.OnClickListener.class, value = R.id.txt_my_address)
     public void toAddressActivity(View view){
 
         startActivity(new Intent(getActivity(), AddressListActivity.class),true);
     }
 
-    @OnClick(R.id.txt_my_favorite)
+    @Event(type = View.OnClickListener.class, value = R.id.txt_my_favorite)
     public void toFavoriteActivity(View view){
 
         startActivity(new Intent(getActivity(), MyFavoriteActivity.class), true);

@@ -8,6 +8,8 @@ import com.facebook.drawee.backends.pipeline.Fresco;
 import com.kline.bean.User;
 import com.kline.utils.UserLocalData;
 
+import org.xutils.x;
+
 /**
  * Created by mei on 2016/3/15.
  */
@@ -19,6 +21,8 @@ public class HtReaderApp extends Application {
     public void onCreate() {
         super.onCreate();
         mInstance = this;
+        x.Ext.init(this);
+        x.Ext.setDebug(false);  // 输出日子， 开启会影响性能
         initUser();
         Fresco.initialize(getApplicationContext());
     }

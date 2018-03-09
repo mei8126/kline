@@ -3,6 +3,7 @@ package com.kline.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.ViewUtils;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.Log;
@@ -14,10 +15,12 @@ import com.kline.utils.ManifestUtil;
 import com.kline.utils.ToastUtils;
 import com.kline.widget.ClearEditText;
 import com.kline.widget.HtToolBar;
-import com.lidroid.xutils.ViewUtils;
-import com.lidroid.xutils.view.annotation.ViewInject;
+
 
 import org.json.JSONObject;
+import org.xutils.view.annotation.ContentView;
+import org.xutils.view.annotation.ViewInject;
+import org.xutils.x;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,6 +32,7 @@ import cn.smssdk.SMSSDK;
 import cn.smssdk.utils.SMSLog;
 import dmax.dialog.SpotsDialog;
 
+@ContentView(R.layout.activity_reg)
 public class RegActivity extends BaseActivity {
 
     private final String TAG = RegActivity.class.getSimpleName();
@@ -59,8 +63,8 @@ public class RegActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_reg);
-        ViewUtils.inject(this);
+        // setContentView(R.layout.activity_reg);
+        x.view().inject(this);
         initToolbar();
         initSMSSDK();
         setCountryView(DEFAULT_COUNTRY_ID);

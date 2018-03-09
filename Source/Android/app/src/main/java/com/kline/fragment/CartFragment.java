@@ -22,14 +22,18 @@ import com.kline.http.OkHttpHelper;
 import com.kline.log.HtLog;
 import com.kline.utils.CartProvider;
 import com.kline.widget.HtToolBar;
-import com.lidroid.xutils.view.annotation.ViewInject;
-import com.lidroid.xutils.view.annotation.event.OnClick;
+
+import org.xutils.view.annotation.ContentView;
+import org.xutils.view.annotation.Event;
+import org.xutils.view.annotation.ViewInject;
+import org.xutils.x;
 
 import java.util.List;
 
 /**
  * Created by mei on 2016/3/1.
  */
+@ContentView(R.layout.fragment_cart)
 public class CartFragment extends BaseFragment implements View.OnClickListener {
 
     private final String TAG = CartFragment.class.getSimpleName();
@@ -61,7 +65,8 @@ public class CartFragment extends BaseFragment implements View.OnClickListener {
     @Nullable
     @Override
     public View createView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_cart, container, false);
+        //View view = inflater.inflate(R.layout.fragment_cart, container, false);
+        View view = x.view().inject(this, inflater, container);
         return view;
     }
 
@@ -151,12 +156,12 @@ public class CartFragment extends BaseFragment implements View.OnClickListener {
 
     }
 
-    @OnClick(R.id.btn_del)
+    @Event(type = View.OnClickListener.class, value = R.id.btn_del)
     public void deleteBtnOnClick(View view) {
         cartAdapter.deleteSelectedCart();
     }
 
-    @OnClick(R.id.btn_order)
+    @Event(type = View.OnClickListener.class, value = R.id.btn_order)
     public void toOrder(View view) {
 //        mOkHttpHelper.get(Contants.API.USER_DETAIL, new SpotsCallback<User>(getContext()) {
 //            @Override

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.ViewUtils;
 import android.view.View;
 
 import com.kline.common.Contants;
@@ -17,9 +18,11 @@ import com.kline.bean.Order;
 import com.kline.http.OkHttpHelper;
 import com.kline.http.SpotsCallback;
 import com.kline.widget.HtToolBar;
-import com.lidroid.xutils.ViewUtils;
-import com.lidroid.xutils.util.LogUtils;
-import com.lidroid.xutils.view.annotation.ViewInject;
+
+
+import org.xutils.view.annotation.ContentView;
+import org.xutils.view.annotation.ViewInject;
+import org.xutils.x;
 
 import java.util.HashMap;
 import java.util.List;
@@ -27,6 +30,7 @@ import java.util.Map;
 
 import okhttp3.Response;
 
+@ContentView(R.layout.activity_my_order)
 public class MyOrderActivity extends BaseActivity implements TabLayout.OnTabSelectedListener {
 
     public static final int STATUS_ALL=1000;
@@ -49,8 +53,8 @@ public class MyOrderActivity extends BaseActivity implements TabLayout.OnTabSele
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_order);
-        ViewUtils.inject(this);
+        // setContentView(R.layout.activity_my_order);
+        x.view().inject(this);
         initToolBar();
         initTab();
         getOrders();
@@ -102,7 +106,8 @@ public class MyOrderActivity extends BaseActivity implements TabLayout.OnTabSele
             }
             @Override
             public void onError(Response response, int code, Exception e) {
-                LogUtils.d("code:" + code);
+                //LogUtils.d("code:" + code);
+
             }
         });
     }

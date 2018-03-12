@@ -15,6 +15,7 @@ import com.kline.bean.HomeCampaign;
 import com.kline.http.OkHttpHelper;
 import com.kline.http.SimpleCallback;
 import com.kline.stock.bean.Stock;
+import com.kline.stock.db.StockDBUtils;
 import com.kline.stock.utils.FileUtils;
 
 import org.xutils.view.annotation.ContentView;
@@ -68,6 +69,9 @@ public class HomeFragment extends BaseFragment {
             if(szStocks != null && szStocks.size()>0) {
                 stocksList.addAll(szStocks);
             }
+
+            StockDBUtils.getStockDbManager(getContext()).save(stocksList);
+
         } catch (IOException e) {
             e.printStackTrace();
         }

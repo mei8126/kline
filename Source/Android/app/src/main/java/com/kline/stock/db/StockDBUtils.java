@@ -3,11 +3,15 @@ package com.kline.stock.db;
 import android.content.Context;
 import android.util.Log;
 
+import com.kline.stock.bean.Stock;
+
 import org.xutils.DbManager;
 import org.xutils.db.table.TableEntity;
+import org.xutils.ex.DbException;
 import org.xutils.x;
 
 import java.io.File;
+import java.util.List;
 
 /**
  * Created by mei on 2018/3/12.
@@ -51,6 +55,20 @@ public class StockDBUtils {
 
         return x.getDb(daoConfig);
     }
+
+    public static List<Stock> dbFind(DbManager db, String key) throws DbException {
+
+        List<Stock> stocks = db.selector(Stock.class)
+                .where("code","like","%" + key + "%")
+                .or("name", "like", "%" + key + "%")
+                .limit(12) //只查询12记录
+                .findAll();
+
+        return stocks;
+    }
+
+
+
 
 
 }

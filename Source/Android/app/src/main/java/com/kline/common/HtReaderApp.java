@@ -22,7 +22,7 @@ public class HtReaderApp extends Application {
         super.onCreate();
         mInstance = this;
         x.Ext.init(this);
-        x.Ext.setDebug(false);  // 输出日子， 开启会影响性能
+        x.Ext.setDebug(true);  // 输出日子， 开启会影响性能
         initUser();
         Fresco.initialize(getApplicationContext());
     }

@@ -6,7 +6,8 @@ import org.xutils.db.annotation.Table;
 /**
  * Created by mei on 2018/3/9.
  */
-@Table(name = "stock_info",onCreated = "sql")
+//@Table(name = "stock_info",onCreated = "")
+@Table(name = "stock_info")
 public class Stock {
     @Column(name = "id", isId = true, autoGen = true, property = "NOT NULL")
     private int id;

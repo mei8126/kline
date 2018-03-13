@@ -18,6 +18,8 @@ import com.kline.stock.bean.Stock;
 import com.kline.stock.db.StockDBUtils;
 import com.kline.stock.utils.FileUtils;
 
+import org.xutils.DbManager;
+import org.xutils.ex.DbException;
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
@@ -56,7 +58,16 @@ public class HomeFragment extends BaseFragment {
     public void init() {
         requestImages();
         //initRecyclerView();
-        initDatas(stocksList);
+        DbManager db = StockDBUtils.getStockDbManager(getContext());
+
+
+        try {
+            List<Stock> stocks = StockDBUtils.dbFind(db, "60");
+            initDatas(stocks);
+        } catch (DbException e) {
+            e.printStackTrace();
+        }
+        //initDatas(stocksList);
     }
 
     private void requestImages() {

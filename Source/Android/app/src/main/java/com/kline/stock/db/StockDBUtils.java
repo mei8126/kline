@@ -21,6 +21,7 @@ public class StockDBUtils {
     public static final String STOCK_DB_NAME = "stock.db";
     public static final String STOCK_TABLE_NAME = "stock_info";
 
+
     public static DbManager getStockDbManager(Context context) {
         DbManager.DaoConfig daoConfig = new DbManager.DaoConfig();
         //设置数据库名，默认xutils.db

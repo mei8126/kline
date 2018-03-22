@@ -5,6 +5,8 @@
     <!-- if you want to load images from the internet -->
     <uses-permission android:name="android.permission.INTERNET" />
 
+
+
     <!-- if you want to load images from a file OR from the internet -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.GET_TASKS" />
@@ -25,6 +27,8 @@
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.READ_SMS" />
+
+
 
     <application
         android:name=".common.HtReaderApp"
@@ -257,7 +261,7 @@
         <activity
             android:name=".activity.OrderDetailActivity"
             android:label="@string/title_activity_order_detail" />
-        <activity android:name=".activity.MainActivity"></activity>==
+        <activity android:name=".activity.MainActivity"></activity>
     </application>
 
 </manifest>

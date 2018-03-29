@@ -1,5 +1,6 @@
 package com.kline.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
@@ -8,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.kline.activity.StockSearchActivity;
 import com.kline.common.Contants;
 import com.kline.R;
 import com.kline.adapter.StockListAdapter;
@@ -17,6 +19,7 @@ import com.kline.http.SimpleCallback;
 import com.kline.stock.bean.Stock;
 import com.kline.stock.db.StockDBUtils;
 import com.kline.stock.utils.FileUtils;
+import com.kline.widget.HtToolBar;
 
 import org.xutils.DbManager;
 import org.xutils.ex.DbException;
@@ -42,8 +45,13 @@ public class HomeFragment extends BaseFragment {
 
     @ViewInject(R.id.recyclerview)
     private RecyclerView mRecyclerView;
+
+    @ViewInject(R.id.toolbar)
+    private HtToolBar toolBar;
     private StockListAdapter mAdapter;
     private OkHttpHelper  okHttpHelper = OkHttpHelper.getInstance();
+
+
 
     private List<Stock> stocksList = new ArrayList<>();
 
@@ -51,6 +59,15 @@ public class HomeFragment extends BaseFragment {
     public View createView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // View view = inflater.inflate(R.layout.fragment_home, container, false);
         View view = x.view().inject(this, inflater, container);
+        toolBar.setRightButtonIcon(R.mipmap.icon_search);
+        toolBar.setRightButtonOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), StockSearchActivity.class);
+                startActivity(intent);
+            }
+        });
         return view;
     }
 

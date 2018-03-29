@@ -22,6 +22,10 @@ public class Stock {
     @Column(name = "market")
     protected String market;
 
+    // 简拼
+    @Column(name = "simple_spelling")
+    private String simpleSpelling;
+
     //默认的构造方法必须写出，如果没有，这张表是创建不成功的
     public Stock() {
     }
@@ -56,5 +60,13 @@ public class Stock {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getSimpleSpelling() {
+        return simpleSpelling;
+    }
+
+    public void setSimpleSpelling(String simpleSpelling) {
+        this.simpleSpelling = simpleSpelling;
     }
 }

@@ -18,7 +18,6 @@ import com.kline.http.OkHttpHelper;
 import com.kline.http.SimpleCallback;
 import com.kline.stock.bean.Stock;
 import com.kline.stock.db.StockDBUtils;
-import com.kline.stock.utils.FileUtils;
 import com.kline.widget.HtToolBar;
 
 import org.xutils.DbManager;
@@ -39,9 +38,9 @@ import okhttp3.Response;
  * Created by mei on 2016/3/1.
  */
 @ContentView(R.layout.fragment_home)
-public class HomeFragment extends BaseFragment {
+public class SelfStockFragment extends BaseFragment {
 
-    private final String TAG = HomeFragment.class.getSimpleName();
+    private final String TAG = SelfStockFragment.class.getSimpleName();
 
     @ViewInject(R.id.recyclerview)
     private RecyclerView mRecyclerView;
@@ -53,7 +52,7 @@ public class HomeFragment extends BaseFragment {
 
 
 
-    private List<Stock> stocksList = new ArrayList<>();
+    private List<Stock> selfStocks = new ArrayList<>();
 
     @Override
     public View createView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -79,12 +78,13 @@ public class HomeFragment extends BaseFragment {
 
 
         try {
-            List<Stock> stocks = StockDBUtils.dbFind(db, "lf");
+            List<Stock> stocks = StockDBUtils.dbFindSelfStocks(db);
             initDatas(stocks);
         } catch (DbException e) {
             e.printStackTrace();
         }
         //initDatas(stocksList);
+
     }
 
     private void requestImages() {

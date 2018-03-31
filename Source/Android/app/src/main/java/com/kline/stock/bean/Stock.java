@@ -6,7 +6,6 @@ import org.xutils.db.annotation.Table;
 /**
  * Created by mei on 2018/3/9.
  */
-//@Table(name = "stock_info",onCreated = "")
 @Table(name = "stock_info")
 public class Stock {
     @Column(name = "id", isId = true, autoGen = true, property = "NOT NULL")
@@ -25,6 +24,11 @@ public class Stock {
     // 简拼
     @Column(name = "simple_spelling")
     private String simpleSpelling;
+
+    // 是否属于自选股
+    @Column(name = "self")
+    private Boolean self;
+
 
     //默认的构造方法必须写出，如果没有，这张表是创建不成功的
     public Stock() {
@@ -68,5 +72,13 @@ public class Stock {
 
     public void setSimpleSpelling(String simpleSpelling) {
         this.simpleSpelling = simpleSpelling;
+    }
+
+    public Boolean getSelf() {
+        return self;
+    }
+
+    public void setSelf(Boolean self) {
+        this.self = self;
     }
 }

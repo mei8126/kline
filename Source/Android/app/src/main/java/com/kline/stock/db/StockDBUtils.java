@@ -57,14 +57,34 @@ public class StockDBUtils {
         return x.getDb(daoConfig);
     }
 
+    /**
+     * 根据关键字查找股票
+     * @param db
+     * @param key
+     * @return
+     * @throws DbException
+     */
     public static List<Stock> dbFind(DbManager db, String key) throws DbException {
-
 
         List<Stock> stocks = db.selector(Stock.class)
                 .where("code","like","%" + key + "%")
                 .or("name", "like", "%" + key + "%")
                 .or("simple_spelling", "like", "%" + key + "%")
                 .limit(12) //只查询12记录
+                .findAll();
+
+        return stocks;
+    }
+
+    /**
+     * 查找自选股
+     * @param db
+     * @return
+     * @throws DbException
+     */
+    public static List<Stock> dbFindSelfStocks(DbManager db) throws DbException {
+        List<Stock> stocks = db.selector(Stock.class)
+                .where("self","=", true)
                 .findAll();
 
         return stocks;

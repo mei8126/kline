@@ -2,7 +2,6 @@ package com.kline.stock.utils;
 
 import android.content.Context;
 import android.text.TextUtils;
-import android.util.Log;
 
 import com.kline.stock.bean.Stock;
 
@@ -51,7 +50,9 @@ public class FileUtils {
                 stockCode.setCode(code);
                 stockCode.setMarket(market);
                 stockCode.setSimpleSpelling(getStockSimpleSpelling(name));
+                stockCode.setSelf(true);
                 stockList.add(stockCode);
+
             } catch (Exception e) {
                 System.out.println("stock 文件在第 " + lineIndex + " 行编写有误");
                 e.printStackTrace();

@@ -58,14 +58,14 @@ public class CartProvider {
     private void commit() {
         List<ShoppingCart> carts = sparseArrayToList();
 
-        PreferencesUtils.putString(mContext, CART_JSON, JSONUtil.toJSON(carts));
+        SharedPreferencesUtils.putString(mContext, CART_JSON, GsonUtils.toJsonStr(carts));
     }
 
     private List<ShoppingCart> getDataFromLocal(){
-        String json = PreferencesUtils.getString(mContext, CART_JSON);
+        String json = SharedPreferencesUtils.getString(mContext, CART_JSON);
         List<ShoppingCart> carts = null;
         if(json != null) {
-            carts = JSONUtil.fromJson(json, new TypeToken<List<ShoppingCart>>(){}.getType());
+            carts = GsonUtils.fromJson(json, new TypeToken<List<ShoppingCart>>(){}.getType());
         }
         return carts;
     }

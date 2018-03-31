@@ -8,7 +8,7 @@ import java.lang.reflect.Type;
 /**
  * Created by mei on 2016/3/17.
  */
-public class JSONUtil {
+public class GsonUtils {
     private static Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
 
     public static  Gson getGson(){
@@ -25,8 +25,13 @@ public class JSONUtil {
         return  gson.fromJson(json,type);
     }
 
-    public static String toJSON(Object object){
+    public static String toJsonStr(Object object){
 
         return gson.toJson(object);
     }
+
+    //    public static <T> List<T> fromJson(String json) {
+//        return gson.fromJson(json, new TypeToken<List<T>>(){}.getType());
+//    }
+
 }

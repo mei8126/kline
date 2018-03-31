@@ -24,7 +24,7 @@ import com.kline.http.SpotsCallback;
 import com.kline.msg.BaseRespMsg;
 import com.kline.msg.CreateOrderRespMsg;
 import com.kline.utils.CartProvider;
-import com.kline.utils.JSONUtil;
+import com.kline.utils.GsonUtils;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -179,7 +179,7 @@ public class CreateOrderActivity extends BaseActivity implements View.OnClickLis
             WareItem item = new WareItem(c.getId(),(int)c.getPrice());
             items.add(item);
         }
-        String item_json = JSONUtil.toJSON(items);
+        String item_json = GsonUtils.toJsonStr(items);
         Map<String,Object> params = new HashMap<>(5);
         params.put("user_id", HtReaderApp.getInstance().getUser().getId()+"");
         params.put("item_json",item_json);
@@ -195,7 +195,7 @@ public class CreateOrderActivity extends BaseActivity implements View.OnClickLis
                 mBtnCreateOrder.setEnabled(true);
                 orderNum = respMsg.getData().getOrderNum();
                 Charge charge = respMsg.getData().getCharge();
-                openPaymentActivity(JSONUtil.toJSON(charge));
+                openPaymentActivity(GsonUtils.toJsonStr(charge));
             }
             @Override
             public void onError(Response response, int code, Exception e) {

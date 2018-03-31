@@ -6,6 +6,7 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
@@ -81,6 +82,8 @@ public class StockSearchActivity extends AppCompatActivity {
     };
 
     private void searchStocks(String key) {
+        if(TextUtils.isEmpty(key))
+            return;
         DbManager db = StockDBUtils.getStockDbManager(this);
         try {
             stocks.clear();

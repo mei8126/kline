@@ -10,10 +10,9 @@ import android.widget.TabHost;
 import android.widget.TextView;
 
 import com.kline.R;
-import com.kline.activity.BaseActivity;
 import com.kline.bean.BottomTab;
 import com.kline.fragment.CartFragment;
-import com.kline.fragment.HomeFragment;
+import com.kline.fragment.SelfStockFragment;
 import com.kline.fragment.HotFragment;
 import com.kline.fragment.MineFragment;
 import com.kline.fragment.CategoryFragment;
@@ -41,7 +40,7 @@ public class MainActivity extends BaseActivity {
 
 
     private void initBottomTab() {
-        BottomTab homeTab = new BottomTab(R.string.home, R.drawable.tab_selector_home, HomeFragment.class);
+        BottomTab homeTab = new BottomTab(R.string.home, R.drawable.tab_selector_home, SelfStockFragment.class);
         BottomTab categoryTab = new BottomTab(R.string.hot, R.drawable.tab_selector_hot, HotFragment.class);
         BottomTab searchTab = new BottomTab(R.string.category, R.drawable.tab_selector_discover, CategoryFragment.class);
         BottomTab carTab = new BottomTab(R.string.cart, R.drawable.tab_selector_car, CartFragment.class);

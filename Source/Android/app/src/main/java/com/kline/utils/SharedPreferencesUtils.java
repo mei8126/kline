@@ -6,8 +6,8 @@ import android.content.SharedPreferences;
 /**
  * Created by mei on 2016/3/17.
  */
-public class PreferencesUtils {
-    public static String PREFERENCE_NAME = "Cniao_Pref_Common";
+public class SharedPreferencesUtils {
+    public static String PREFERENCE_NAME = "kline";
 
     /**
      * put string preferences
@@ -217,5 +217,28 @@ public class PreferencesUtils {
     public static boolean getBoolean(Context context, String key, boolean defaultValue) {
         SharedPreferences settings = context.getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE);
         return settings.getBoolean(key, defaultValue);
+    }
+
+    /**
+     * 获取保存的自选股
+     * @param context
+     * @return
+     */
+    public static String getSelfStocks(Context context) {
+        SharedPreferences settings = context.getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE);
+        return settings.getString("self_stock", "");
+    }
+
+    /**
+     * 保存自选股
+     * @param context
+     * @param stocksJson  自选股转换为json字串
+     * @return
+     */
+    public static boolean saveSelfStocks(Context context, String stocksJson) {
+        SharedPreferences settings = context.getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putString("self_stock", stocksJson);
+        return editor.commit();
     }
 }

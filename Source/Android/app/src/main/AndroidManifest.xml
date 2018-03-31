@@ -81,8 +81,7 @@
             android:name="com.pingplusplus.android.PaymentActivity"
             android:configChanges="orientation|screenSize"
             android:launchMode="singleTop"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-        <!-- 微信支付 sdk ，也是 Ping++ sdk 调用入口 -->
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- 微信支付 sdk ，也是 Ping++ sdk 调用入口 -->
         <activity-alias
             android:name=".wxapi.WXPayEntryActivity"
             android:exported="true"
@@ -257,7 +256,10 @@
         <activity
             android:name=".activity.OrderDetailActivity"
             android:label="@string/title_activity_order_detail" />
-        <activity android:name=".activity.MainActivity"></activity>
+
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.StockSearchActivity"></activity>
+
     </application>
 
 </manifest>

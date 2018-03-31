@@ -56,13 +56,13 @@ public class HomeFragment extends BaseFragment {
 
     @Override
     public void init() {
-        requestImages();
+        //requestImages();
         //initRecyclerView();
         DbManager db = StockDBUtils.getStockDbManager(getContext());
 
 
         try {
-            List<Stock> stocks = StockDBUtils.dbFind(db, "60");
+            List<Stock> stocks = StockDBUtils.dbFind(db, "lf");
             initDatas(stocks);
         } catch (DbException e) {
             e.printStackTrace();
@@ -71,21 +71,21 @@ public class HomeFragment extends BaseFragment {
     }
 
     private void requestImages() {
-        try {
-            List<Stock> shStocks = FileUtils.readAssetsStockFile(getActivity(), "sh_code_20180309.txt");
-            if(shStocks != null && shStocks.size()>0) {
-                stocksList.addAll(shStocks);
-            }
-            List<Stock> szStocks = FileUtils.readAssetsStockFile(getActivity(), "sz_code_20180309.txt");
-            if(szStocks != null && szStocks.size()>0) {
-                stocksList.addAll(szStocks);
-            }
-
-            StockDBUtils.getStockDbManager(getContext()).save(stocksList);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            List<Stock> shStocks = FileUtils.readAssetsStockFile(getActivity(), "sh_code_20180309.txt");
+//            if(shStocks != null && shStocks.size()>0) {
+//                stocksList.addAll(shStocks);
+//            }
+//            List<Stock> szStocks = FileUtils.readAssetsStockFile(getActivity(), "sz_code_20180309.txt");
+//            if(szStocks != null && szStocks.size()>0) {
+//                stocksList.addAll(szStocks);
+//            }
+//
+//            StockDBUtils.getStockDbManager(getContext()).save(stocksList);
+//
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 
     private void initRecyclerView() {

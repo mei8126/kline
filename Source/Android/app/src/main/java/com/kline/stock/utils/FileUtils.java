@@ -35,20 +35,27 @@ public class FileUtils {
         InputStreamReader read = new InputStreamReader(inputStream, encoding);//考虑到编码格式
         BufferedReader bufferedReader = new BufferedReader(read);
         String lineTxt = null;
+        int lineIndex = 0;
         while ((lineTxt = bufferedReader.readLine()) != null) {
             Stock stockCode = new Stock();
             lineTxt = lineTxt.trim();
-            if(TextUtils.isEmpty(lineTxt))
+            lineIndex++;
+            if(TextUtils.isEmpty(lineTxt) || lineIndex == 1 ) {
                 continue;
-            Log.i("stock", "lineTxt:" + lineTxt + ", fileAssetsName:" + fileAssetsName);
+            }
 
-            String name = lineTxt.substring(0, lineTxt.indexOf("("));
-            String code = lineTxt.substring(lineTxt.indexOf("(")+1, lineTxt.lastIndexOf(")"));
-
-            stockCode.setName(name);
-            stockCode.setCode(code);
-            stockCode.setMarket(market);
-            stockList.add(stockCode);
+            try {
+                String name = lineTxt.substring(0, lineTxt.indexOf("("));
+                String code = lineTxt.substring(lineTxt.indexOf("(") + 1, lineTxt.lastIndexOf(")"));
+                stockCode.setName(name);
+                stockCode.setCode(code);
+                stockCode.setMarket(market);
+                stockCode.setSimpleSpelling(getStockSimpleSpelling(name));
+                stockList.add(stockCode);
+            } catch (Exception e) {
+                System.out.println("stock 文件在第 " + lineIndex + " 行编写有误");
+                e.printStackTrace();
+            }
 
         }
         read.close();
@@ -56,43 +63,25 @@ public class FileUtils {
         return stockList;
     }
 
-//    public static List<Stock> stockCodeTxtParse(File file) {
-//        StringBuilder sb = new StringBuilder();
-//        List<Stock> stockList = new ArrayList<Stock>();
-//        String market;
-//        if(file.getName().contains("sh")) {
-//            market = "sh";
-//        } else {
-//            market = "sz";
-//        }
-//        try {
-//            String encoding = "UTF-8";
-//            if (file.isFile() && file.exists()) { //判断文件是否存在
-//                InputStreamReader read = new InputStreamReader(new FileInputStream(file), encoding);//考虑到编码格式
-//                BufferedReader bufferedReader = new BufferedReader(read);
-//                String lineTxt = null;
-//                while ((lineTxt = bufferedReader.readLine()) != null) {
-//                    Stock stockCode = new Stock();
-//                    lineTxt = lineTxt.trim();
-//                    String name = lineTxt.substring(0, lineTxt.indexOf("(")-1);
-//                    String code = lineTxt.substring(lineTxt.indexOf("(")+1, lineTxt.lastIndexOf(")"));
-//
-//                    stockCode.setName(name);
-//                    stockCode.setCode(code);
-//                    stockCode.setMarket(market);
-//                    stockList.add(stockCode);
-//                }
-//                read.close();
-//            } else {
-//                System.out.println("找不到指定的文件");
-//                return stockList;
-//            }
-//        } catch (Exception e) {
-//            System.out.println("读取文件内容出错");
-//            e.printStackTrace();
-//        }
-//        return stockList;
-//    }
+    /**
+     *
+     * @return
+     */
+    public static String getStockSimpleSpelling(String name) {
+        StringBuilder simpleSpelling = new StringBuilder();
+
+        CharacterParser characterParser = CharacterParser.getInstance();
+        for (int i = 0; i < name.length(); i++) {
+            String pinyin = characterParser.getSelling(name.substring(i,i+1));
+            if (!TextUtils.isEmpty(pinyin)) {
+                simpleSpelling.append(pinyin.charAt(0));
+            } else {
+
+            }
+        }
+        return simpleSpelling.toString();
+    }
+
 
 
 

@@ -58,9 +58,11 @@ public class StockDBUtils {
 
     public static List<Stock> dbFind(DbManager db, String key) throws DbException {
 
+
         List<Stock> stocks = db.selector(Stock.class)
                 .where("code","like","%" + key + "%")
                 .or("name", "like", "%" + key + "%")
+                .or("simple_spelling", "like", "%" + key + "%")
                 .limit(12) //只查询12记录
                 .findAll();
 

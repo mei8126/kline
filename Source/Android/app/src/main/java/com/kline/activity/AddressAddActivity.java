@@ -57,6 +57,7 @@ public class AddressAddActivity extends BaseActivity {
     private HtToolBar mToolBar;
 
 
+
     private List<ProvinceModel> mProvinces;
     private ArrayList<ArrayList<String>> mCities = new ArrayList<ArrayList<String>>();
     private ArrayList<ArrayList<ArrayList<String>>> mDistricts = new ArrayList<ArrayList<ArrayList<String>>>();

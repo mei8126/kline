@@ -1,0 +1,27 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.kline.pojo.Resource",
+      "name": "com.kline.opensource",
+      "type": "com.kline.pojo.Resource"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.kline.pojo.Resource",
+      "name": "com.kline.opensource.language",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.kline.pojo.Resource",
+      "name": "com.kline.opensource.name",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.kline.pojo.Resource",
+      "name": "com.kline.opensource.website",
+      "type": "java.lang.String"
+    }
+  ]
+}

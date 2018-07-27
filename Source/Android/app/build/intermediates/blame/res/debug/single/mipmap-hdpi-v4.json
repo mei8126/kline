@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\icon_user_press.png",
+        "source": "D:\\Work\\stock\\kline\\Source\\Android\\app\\src\\main\\res\\mipmap-hdpi\\icon_user_press.png"
+    },
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\icon_user.png",
+        "source": "D:\\Work\\stock\\kline\\Source\\Android\\app\\src\\main\\res\\mipmap-hdpi\\icon_user.png"
+    },
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\icon_hot_press.png",
+        "source": "D:\\Work\\stock\\kline\\Source\\Android\\app\\src\\main\\res\\mipmap-hdpi\\icon_hot_press.png"
+    },
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\icon_discover.png",
+        "source": "D:\\Work\\stock\\kline\\Source\\Android\\app\\src\\main\\res\\mipmap-hdpi\\icon_discover.png"
+    },
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\icon_hot.png",
+        "source": "D:\\Work\\stock\\kline\\Source\\Android\\app\\src\\main\\res\\mipmap-hdpi\\icon_hot.png"
+    },
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\icon_cartfill_press.png",
+        "source": "D:\\Work\\stock\\kline\\Source\\Android\\app\\src\\main\\res\\mipmap-hdpi\\icon_cartfill_press.png"
+    },
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\icon_home.png",
+        "source": "D:\\Work\\stock\\kline\\Source\\Android\\app\\src\\main\\res\\mipmap-hdpi\\icon_home.png"
+    },
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\icon_home_press.png",
+        "source": "D:\\Work\\stock\\kline\\Source\\Android\\app\\src\\main\\res\\mipmap-hdpi\\icon_home_press.png"
+    },
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\icon_search.png",
+        "source": "D:\\Work\\stock\\kline\\Source\\Android\\app\\src\\main\\res\\mipmap-hdpi\\icon_search.png"
+    },
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
+        "source": "D:\\Work\\stock\\kline\\Source\\Android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\icon_cart.png",
+        "source": "D:\\Work\\stock\\kline\\Source\\Android\\app\\src\\main\\res\\mipmap-hdpi\\icon_cart.png"
+    },
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\icon_discover_press.png",
+        "source": "D:\\Work\\stock\\kline\\Source\\Android\\app\\src\\main\\res\\mipmap-hdpi\\icon_discover_press.png"
+    }
+]

@@ -1,0 +1,94 @@
+[
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_secondary_text_material_dark.xml",
+        "source": "C:\\Users\\mei\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\0a10736d0f81271186c2db6e9261de9d\\res\\color\\abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\design_error.xml",
+        "source": "C:\\Users\\mei\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.0.2.aar\\51d1b1a8242fa507b05849cd5898785b\\res\\color\\design_error.xml"
+    },
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_hint_foreground_material_dark.xml",
+        "source": "C:\\Users\\mei\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\0a10736d0f81271186c2db6e9261de9d\\res\\color\\abc_hint_foreground_material_dark.xml"
+    },
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\switch_thumb_material_dark.xml",
+        "source": "C:\\Users\\mei\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\0a10736d0f81271186c2db6e9261de9d\\res\\color\\switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\switch_thumb_material_light.xml",
+        "source": "C:\\Users\\mei\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\0a10736d0f81271186c2db6e9261de9d\\res\\color\\switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_tint_edittext.xml",
+        "source": "C:\\Users\\mei\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\0a10736d0f81271186c2db6e9261de9d\\res\\color\\abc_tint_edittext.xml"
+    },
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_btn_colored_borderless_text_material.xml",
+        "source": "C:\\Users\\mei\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\0a10736d0f81271186c2db6e9261de9d\\res\\color\\abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_tint_spinner.xml",
+        "source": "C:\\Users\\mei\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\0a10736d0f81271186c2db6e9261de9d\\res\\color\\abc_tint_spinner.xml"
+    },
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_btn_colored_text_material.xml",
+        "source": "C:\\Users\\mei\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\0a10736d0f81271186c2db6e9261de9d\\res\\color\\abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\wallet_base_dialog_btntext_color_selector.xml",
+        "source": "D:\\Work\\stock\\kline\\Source\\Android\\baidupay\\build\\intermediates\\bundles\\debug\\res\\color\\wallet_base_dialog_btntext_color_selector.xml"
+    },
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\wallet_base_click_text_color.xml",
+        "source": "D:\\Work\\stock\\kline\\Source\\Android\\baidupay\\build\\intermediates\\bundles\\debug\\res\\color\\wallet_base_click_text_color.xml"
+    },
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_disable_only_material_light.xml",
+        "source": "C:\\Users\\mei\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\0a10736d0f81271186c2db6e9261de9d\\res\\color\\abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_disable_only_material_dark.xml",
+        "source": "C:\\Users\\mei\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\0a10736d0f81271186c2db6e9261de9d\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_tint_btn_checkable.xml",
+        "source": "C:\\Users\\mei\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\0a10736d0f81271186c2db6e9261de9d\\res\\color\\abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_material_dark.xml",
+        "source": "C:\\Users\\mei\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\0a10736d0f81271186c2db6e9261de9d\\res\\color\\abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_secondary_text_material_light.xml",
+        "source": "C:\\Users\\mei\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\0a10736d0f81271186c2db6e9261de9d\\res\\color\\abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_search_url_text.xml",
+        "source": "C:\\Users\\mei\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\0a10736d0f81271186c2db6e9261de9d\\res\\color\\abc_search_url_text.xml"
+    },
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_tint_default.xml",
+        "source": "C:\\Users\\mei\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\0a10736d0f81271186c2db6e9261de9d\\res\\color\\abc_tint_default.xml"
+    },
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_material_light.xml",
+        "source": "C:\\Users\\mei\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\0a10736d0f81271186c2db6e9261de9d\\res\\color\\abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\design_tint_password_toggle.xml",
+        "source": "C:\\Users\\mei\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.0.2.aar\\51d1b1a8242fa507b05849cd5898785b\\res\\color\\design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_tint_switch_track.xml",
+        "source": "C:\\Users\\mei\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\0a10736d0f81271186c2db6e9261de9d\\res\\color\\abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_tint_seek_thumb.xml",
+        "source": "C:\\Users\\mei\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\0a10736d0f81271186c2db6e9261de9d\\res\\color\\abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "D:\\Work\\stock\\kline\\Source\\Android\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_hint_foreground_material_light.xml",
+        "source": "C:\\Users\\mei\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\0a10736d0f81271186c2db6e9261de9d\\res\\color\\abc_hint_foreground_material_light.xml"
+    }
+]
